@@ -3,15 +3,18 @@
     [
         {
             "gameName": "Demon's Souls",
+            "ID":"1",
             "consola": "PlayStation 5",
             "version": "Remake",
             "categoría": ["Acción","RPG","Aventura"],
             "Año lanzamiento": "2020",
             "valor": "$70",
             "disponible":"true"
+            
         },
         {
             "gameName": "Ratchet & Clank: Rift Apart",
+            "ID": "2",
             "consola": "PlayStation 5",
             "version": "Remake",
             "categoría": ["Acción","Plataforma","Aventura"],
@@ -22,6 +25,7 @@
         },
         {
             "gameName": "Horizon Forbidden West",
+            "ID": "3",
             "consola": "PlayStation 5",
             "version": "Remake",
             "categoría": ["Acción","RPG","Aventura"],
@@ -31,6 +35,7 @@
         },
         {
             "gameName": "Returnal",
+            "ID": "4",
             "consola": "PlayStation 5",
             "version": "Estándar",
             "categoría": ["Acción","Shooter","Roguelike"],
@@ -40,6 +45,7 @@
         },
         {
             "gameName": "Spider-Man: Miles Morales",
+            "ID": "5",
             "consola": "PlayStation 5",
             "version": "Ultimate Edition",
             "categoría": ["Acción","Aventura","Superhéroes"],
@@ -49,6 +55,7 @@
         },
         {
             "gameName": "Halo Infinite",
+            "ID": "6",
             "consola": "Xbox",
             "version": "Estándar",
             "categoría": ["Shooter","Acción","Ciencia Ficción"],
@@ -58,6 +65,7 @@
         },        
         {
             "gameName": "Forza Horizon 5",
+            "ID": "7",
             "consola": "Xbox",
             "version": "Estándar",
             "categoría": ["Carreras","Simulación","Mundo Abierto"],
@@ -67,6 +75,7 @@
         },
         {
             "gameName": "Fable",
+            "ID": "8",
             "consola": "Xbox",
             "version": "Próxima",
             "categoría": ["RPG","Aventura","Fantasía"],
@@ -76,6 +85,7 @@
         },
         {
             "gameName": "Gears 5",
+            "ID": "9",
             "consola": "Xbox",
             "version": "Estándar",
             "categoría": ["Shooter","Acción","Estrategia"],
@@ -85,6 +95,7 @@
         },
         {
             "gameName": "Sea of Thieve",
+            "ID": "10",
             "consola": "Xbox",
             "version": "Estándar",
             "categoría": ["Multijugador","Aventura","Piratas"],
@@ -94,6 +105,7 @@
         },
         {
             "gameName": "The Legend of Zelda: Tears of the Kingdom",
+            "ID": "11",
             "consola": "Nintendo",
             "version": "Estándar",
             "categoría": ["Aventura","Acción","Mundo Abierto"],
@@ -103,6 +115,7 @@
         },
         {
             "gameName": "Super Mario Odyssey",
+            "ID": "12",
             "consola": "Nintendo",
             "version": "Estándar",
             "categoría": ["Plataforma","Aventura","Acción"],
@@ -112,6 +125,7 @@
         },
         {
             "gameName": "Animal Crossing: New Horizons",
+            "ID": "13",
             "consola": "Nintendo",
             "version": "Estándar",
             "categoría": [ "Simulación","Social","Mundo Abierto"],
@@ -121,6 +135,7 @@
         },
         {
             "gameName": "Mario Kart 8 Deluxe",
+            "ID": "14",
             "consola": "Nintendo",
             "version": "Estándar",
             "categoría": ["Carreras","Acción","Multijugador"],
@@ -130,6 +145,7 @@
         },
         {
             "gameName": "Splatoon 3",
+            "ID": "15",
             "consola": "Nintendo",
             "version": "Estándar",
             "categoría": ["Shooter","Acción","Multijugador"],
