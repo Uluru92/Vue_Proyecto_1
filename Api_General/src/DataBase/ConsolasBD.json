@@ -1,0 +1,125 @@
+{
+    "VideoJuegosRegistrados" :
+    [
+        {
+            "gameName": "Demon's Souls",
+            "consola": "PlayStation 5",
+            "version": "Remake",
+            "categoría": ["Acción","RPG","Aventura"],
+            "Año lanzamiento": "2020",
+            "valor": "$70"
+        },
+        {
+            "gameName": "Ratchet & Clank: Rift Apart",
+            "consola": "PlayStation 5",
+            "version": "Remake",
+            "categoría": ["Acción","Plataforma","Aventura"],
+            "Año lanzamiento": "2021",
+            "valor": "$60"
+        },
+        {
+            "gameName": "Horizon Forbidden West",
+            "consola": "PlayStation 5",
+            "version": "Remake",
+            "categoría": ["Acción","RPG","Aventura"],
+            "Año lanzamiento": "2022",
+            "valor": "$70"
+        },
+        {
+            "gameName": "Returnal",
+            "consola": "PlayStation 5",
+            "version": "Estándar",
+            "categoría": ["Acción","Shooter","Roguelike"],
+            "Año lanzamiento": "2021",
+            "valor": "$60"
+        },
+        {
+            "gameName": "Spider-Man: Miles Morales",
+            "consola": "PlayStation 5",
+            "version": "Ultimate Edition",
+            "categoría": ["Acción","Aventura","Superhéroes"],
+            "Año lanzamiento": "2020",
+            "valor": "$70"
+        },
+        {
+            "gameName": "Halo Infinite",
+            "consola": "Xbox",
+            "version": "Estándar",
+            "categoría": ["Shooter","Acción","Ciencia Ficción"],
+            "Año lanzamiento": "2021",
+            "valor": "$60"
+        },        
+        {
+            "gameName": "Forza Horizon 5",
+            "consola": "Xbox",
+            "version": "Estándar",
+            "categoría": ["Carreras","Simulación","Mundo Abierto"],
+            "Año lanzamiento": "2021",
+            "valor": "$60"
+        },
+        {
+            "gameName": "Fable",
+            "consola": "Xbox",
+            "version": "Próxima",
+            "categoría": ["RPG","Aventura","Fantasía"],
+            "Año lanzamiento": "2024",
+            "valor": "$70"
+        },
+        {
+            "gameName": "Gears 5",
+            "consola": "Xbox",
+            "version": "Estándar",
+            "categoría": ["Shooter","Acción","Estrategia"],
+            "Año lanzamiento": "2019",
+            "valor": "$40"
+        },
+        {
+            "gameName": "Sea of Thieve",
+            "consola": "Xbox",
+            "version": "Estándar",
+            "categoría": ["Multijugador","Aventura","Piratas"],
+            "Año lanzamiento": "2018",
+            "valor": "$40"
+        },
+        {
+            "gameName": "The Legend of Zelda: Tears of the Kingdom",
+            "consola": "Nintendo",
+            "version": "Estándar",
+            "categoría": ["Aventura","Acción","Mundo Abierto"],
+            "Año lanzamiento": "2023",
+            "valor": "$70"
+        },
+        {
+            "gameName": "Super Mario Odyssey",
+            "consola": "Nintendo",
+            "version": "Estándar",
+            "categoría": ["Plataforma","Aventura","Acción"],
+            "Año lanzamiento": "2017",
+            "valor": "$60"
+        },
+        {
+            "gameName": "Animal Crossing: New Horizons",
+            "consola": "Nintendo",
+            "version": "Estándar",
+            "categoría": [ "Simulación","Social","Mundo Abierto"],
+            "Año lanzamiento": "2020",
+            "valor": "$60"
+        },
+        {
+            "gameName": "Mario Kart 8 Deluxe",
+            "consola": "Nintendo",
+            "version": "Estándar",
+            "categoría": ["Carreras","Acción","Multijugador"],
+            "Año lanzamiento": "2017",
+            "valor": "$60"
+        },
+        {
+            "gameName": "Splatoon 3",
+            "consola": "Nintendo",
+            "version": "Estándar",
+            "categoría": ["Shooter","Acción","Multijugador"],
+            "Año lanzamiento": "2022",
+            "valor": "$60"
+        }
+    ]
+}
