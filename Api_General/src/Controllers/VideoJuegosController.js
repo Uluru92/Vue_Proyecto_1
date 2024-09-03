@@ -2,10 +2,17 @@ const VideoJuegosBD = require("../DataBase/VideoJuegosBD");
 
 const ObtenerTodosLosVideoJuegos = (req, res) =>
 {
-    res.send("Hola! Este método es para conocer todos los video juegos!");
-    const TodosLosVideoJuegos = VideoJuegosBD.ObtenerTodosLosVideoJuegos
+    const TodosLosVideoJuegos = VideoJuegosBD.ObtenerTodosLosVideoJuegos();
+    res.send({ DetalleRespuesta: TodosLosVideoJuegos })
+
+}
+
+const ValidarDisponibilidad = (req, res) =>
+{
+    console.log('Hola', req.body);
 }
 
 module.exports = {
-    ObtenerTodosLosVideoJuegos
+    ObtenerTodosLosVideoJuegos,
+    ValidarDisponibilidad
 };

@@ -1,8 +1,9 @@
 const express = require ("express");
 const router = express.Router();
-const ObtenerTodosLosVideoJuegos = require("../Controllers/VideoJuegosController")
+const ControladorVideoJuegos = require("../Controllers/VideoJuegosController")
 
 router
-    .get("/ObtenerTodosLosVideoJuegos", ObtenerTodosLosVideoJuegos.ObtenerTodosLosVideoJuegos)
+    .get("/ObtenerTodosLosVideoJuegos", ControladorVideoJuegos.ObtenerTodosLosVideoJuegos)
+    .post("/VerificarDisponibilidadJuego", ControladorVideoJuegos.ValidarDisponibilidad)
 
 module.exports = router;
