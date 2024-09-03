@@ -9,7 +9,7 @@
             "categoría": ["Acción","RPG","Aventura"],
             "Año lanzamiento": "2020",
             "valor": "$70",
-            "disponible":"true"
+            "disponibilidad":"true"
         },
         {
             "gameName": "Ratchet & Clank: Rift Apart",
@@ -19,7 +19,7 @@
             "categoría": ["Acción","Plataforma","Aventura"],
             "Año lanzamiento": "2021",
             "valor": "$60",
-            "disponible": "true"
+            "disponibilidad": "true"
         },
         {
             "gameName": "Horizon Forbidden West",
@@ -29,7 +29,7 @@
             "categoría": ["Acción","RPG","Aventura"],
             "Año lanzamiento": "2022",
             "valor": "$70",
-            "disponible": "true"
+            "disponibilidad": "true"
         },
         {
             "gameName": "Returnal",
@@ -39,7 +39,7 @@
             "categoría": ["Acción","Shooter","Roguelike"],
             "Año lanzamiento": "2021",
             "valor": "$60",
-            "disponible": "false"
+            "disponibilidad": "false"
         },
         {
             "gameName": "Spider-Man: Miles Morales",
@@ -49,7 +49,7 @@
             "categoría": ["Acción","Aventura","Superhéroes"],
             "Año lanzamiento": "2020",
             "valor": "$70",
-            "disponible": "false"
+            "disponibilidad": "false"
         },
         {
             "gameName": "Halo Infinite",
@@ -59,7 +59,7 @@
             "categoría": ["Shooter","Acción","Ciencia Ficción"],
             "Año lanzamiento": "2021",
             "valor": "$60",
-            "disponible": "true"
+            "disponibilidad": "true"
         },        
         {
             "gameName": "Forza Horizon 5",
@@ -69,7 +69,7 @@
             "categoría": ["Carreras","Simulación","Mundo Abierto"],
             "Año lanzamiento": "2021",
             "valor": "$60",
-            "disponible": "true"
+            "disponibilidad": "true"
         },
         {
             "gameName": "Fable",
@@ -79,7 +79,7 @@
             "categoría": ["RPG","Aventura","Fantasía"],
             "Año lanzamiento": "2024",
             "valor": "$70",
-            "disponible": "false"
+            "disponibilidad": "false"
         },
         {
             "gameName": "Gears 5",
@@ -89,7 +89,7 @@
             "categoría": ["Shooter","Acción","Estrategia"],
             "Año lanzamiento": "2019",
             "valor": "$40",
-            "disponible": "true"
+            "disponibilidad": "true"
         },
         {
             "gameName": "Sea of Thieve",
@@ -99,7 +99,7 @@
             "categoría": ["Multijugador","Aventura","Piratas"],
             "Año lanzamiento": "2018",
             "valor": "$40",
-            "disponible": "true"
+            "disponibilidad": "true"
         },
         {
             "gameName": "The Legend of Zelda: Tears of the Kingdom",
@@ -109,7 +109,7 @@
             "categoría": ["Aventura","Acción","Mundo Abierto"],
             "Año lanzamiento": "2023",
             "valor": "$70",
-            "disponible": "true"
+            "disponibilidad": "true"
         },
         {
             "gameName": "Super Mario Odyssey",
@@ -119,7 +119,7 @@
             "categoría": ["Plataforma","Aventura","Acción"],
             "Año lanzamiento": "2017",
             "valor": "$60",
-            "disponible": "true"
+            "disponibilidad": "true"
         },
         {
             "gameName": "Animal Crossing: New Horizons",
@@ -129,7 +129,7 @@
             "categoría": [ "Simulación","Social","Mundo Abierto"],
             "Año lanzamiento": "2020",
             "valor": "$60",
-            "disponible": "true"
+            "disponibilidad": "true"
         },
         {
             "gameName": "Mario Kart 8 Deluxe",
@@ -139,7 +139,7 @@
             "categoría": ["Carreras","Acción","Multijugador"],
             "Año lanzamiento": "2017",
             "valor": "$60",
-            "disponible": "true"
+            "disponibilidad": "true"
         },
         {
             "gameName": "Splatoon 3",
@@ -149,7 +149,7 @@
             "categoría": ["Shooter","Acción","Multijugador"],
             "Año lanzamiento": "2022",
             "valor": "$60",
-            "disponible": "true"
+            "disponibilidad": "true"
         }
     ]
 }

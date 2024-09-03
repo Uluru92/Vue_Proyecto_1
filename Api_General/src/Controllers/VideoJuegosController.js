@@ -13,14 +13,23 @@ const ValidarDisponibilidad = (req, res) =>
     
     const informacionVideoJuego = req.body;
     const TodosLosVideoJuegos = VideoJuegosBD.ObtenerTodosLosVideoJuegos();
-    const DisponibilidadVideoJuego = TodosLosVideoJuegos.some(x => x.disponible === informacionVideoJuego.disponible)
+    const DisponibilidadVideoJuego = TodosLosVideoJuegos.some(x => x.disponibilidad === informacionVideoJuego.disponibilidad)
 
-    const RespuestaDisponibilidad = 
-    {
-        valor: DisponibilidadVideoJuego,
-        descripcion: "Hay juegos disponibles"
+    let codigoDisponibilidad = 0;
+    let descripcionDisponibilidad = "Video juego disponible"
+    
+    if (!DisponibilidadVideoJuego) {
+        codigoDisponibilidad = 99;
+        descripcionDisponibilidad = "Video juego no disponible"
     }
-    res.send(RespuestaDisponibilidad)
+
+    const DetalleDisponibilidad = 
+    {
+        Codigo: codigoDisponibilidad,
+        Descripcion: descripcionDisponibilidad
+    }
+
+    res.send(DetalleDisponibilidad)
 
 }
 
