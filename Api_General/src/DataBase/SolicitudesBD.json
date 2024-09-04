@@ -1,0 +1,18 @@
+{
+  "SolicitudesRegistradas": [
+    {
+      "Nombre": "Jorddy",
+      "NumeroTelefono": "87900040",
+      "CorreoElectronico": "Jorddy.castro@gmail.com",
+      "Comentarios": "quiero este juego!",
+      "BotonEnviar": "listo!"
+    },
+    {
+      "Nombre": "Fabian",
+      "NumeroTelefono": "83552395",
+      "CorreoElectronico": "Jorddy.castro@hotmail.com",
+      "Comentarios": "quiero este juego!!",
+      "BotonEnviar": "listo!!"
+    }
+  ]
+}

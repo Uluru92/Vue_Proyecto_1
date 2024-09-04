@@ -38,6 +38,8 @@ const GuardarVideoJuego = (req, res) =>
     const nuevoVideoJuego = req.body;
     VideoJuegosBD.GuardarVideoJuego(nuevoVideoJuego);
     res.send("Hola")
+
+    
 }
 
 module.exports = {
