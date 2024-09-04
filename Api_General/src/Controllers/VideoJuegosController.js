@@ -35,10 +35,13 @@ const ValidarDisponibilidad = (req, res) =>
 
 const GuardarVideoJuego = (req, res) =>
 {
-    VideoJuegosBD.
+    const nuevoVideoJuego = req.body;
+    VideoJuegosBD.GuardarVideoJuego(nuevoVideoJuego);
+    res.send("Hola")
 }
 
 module.exports = {
     ObtenerTodosLosVideoJuegos,
-    ValidarDisponibilidad
+    ValidarDisponibilidad,
+    GuardarVideoJuego
 };

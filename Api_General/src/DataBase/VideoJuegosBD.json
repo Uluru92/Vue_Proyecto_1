@@ -1,155 +1,228 @@
 {
-    "VideoJuegosRegistrados" :
-    [
-        {
-            "gameName": "Demon's Souls",
-            "ID":"1",
-            "consola": "PlayStation 5",
-            "version": "Remake",
-            "categoría": ["Acción","RPG","Aventura"],
-            "Año lanzamiento": "2020",
-            "valor": "$70",
-            "disponibilidad":"true"
-        },
-        {
-            "gameName": "Ratchet & Clank: Rift Apart",
-            "ID": "2",
-            "consola": "PlayStation 5",
-            "version": "Remake",
-            "categoría": ["Acción","Plataforma","Aventura"],
-            "Año lanzamiento": "2021",
-            "valor": "$60",
-            "disponibilidad": "true"
-        },
-        {
-            "gameName": "Horizon Forbidden West",
-            "ID": "3",
-            "consola": "PlayStation 5",
-            "version": "Remake",
-            "categoría": ["Acción","RPG","Aventura"],
-            "Año lanzamiento": "2022",
-            "valor": "$70",
-            "disponibilidad": "false"
-        },
-        {
-            "gameName": "Returnal",
-            "ID": "4",
-            "consola": "PlayStation 5",
-            "version": "Estándar",
-            "categoría": ["Acción","Shooter","Roguelike"],
-            "Año lanzamiento": "2021",
-            "valor": "$60",
-            "disponibilidad": "false"
-        },
-        {
-            "gameName": "Spider-Man: Miles Morales",
-            "ID": "5",
-            "consola": "PlayStation 5",
-            "version": "Ultimate Edition",
-            "categoría": ["Acción","Aventura","Superhéroes"],
-            "Año lanzamiento": "2020",
-            "valor": "$70",
-            "disponibilidad": "false"
-        },
-        {
-            "gameName": "Halo Infinite",
-            "ID": "6",
-            "consola": "Xbox",
-            "version": "Estándar",
-            "categoría": ["Shooter","Acción","Ciencia Ficción"],
-            "Año lanzamiento": "2021",
-            "valor": "$60",
-            "disponibilidad": "true"
-        },        
-        {
-            "gameName": "Forza Horizon 5",
-            "ID": "7",
-            "consola": "Xbox",
-            "version": "Estándar",
-            "categoría": ["Carreras","Simulación","Mundo Abierto"],
-            "Año lanzamiento": "2021",
-            "valor": "$60",
-            "disponibilidad": "true"
-        },
-        {
-            "gameName": "Fable",
-            "ID": "8",
-            "consola": "Xbox",
-            "version": "Próxima",
-            "categoría": ["RPG","Aventura","Fantasía"],
-            "Año lanzamiento": "2024",
-            "valor": "$70",
-            "disponibilidad": "false"
-        },
-        {
-            "gameName": "Gears 5",
-            "ID": "9",
-            "consola": "Xbox",
-            "version": "Estándar",
-            "categoría": ["Shooter","Acción","Estrategia"],
-            "Año lanzamiento": "2019",
-            "valor": "$40",
-            "disponibilidad": "true"
-        },
-        {
-            "gameName": "Sea of Thieve",
-            "ID": "10",
-            "consola": "Xbox",
-            "version": "Estándar",
-            "categoría": ["Multijugador","Aventura","Piratas"],
-            "Año lanzamiento": "2018",
-            "valor": "$40",
-            "disponibilidad": "true"
-        },
-        {
-            "gameName": "The Legend of Zelda: Tears of the Kingdom",
-            "ID": "11",
-            "consola": "Nintendo",
-            "version": "Estándar",
-            "categoría": ["Aventura","Acción","Mundo Abierto"],
-            "Año lanzamiento": "2023",
-            "valor": "$70",
-            "disponibilidad": "true"
-        },
-        {
-            "gameName": "Super Mario Odyssey",
-            "ID": "12",
-            "consola": "Nintendo",
-            "version": "Estándar",
-            "categoría": ["Plataforma","Aventura","Acción"],
-            "Año lanzamiento": "2017",
-            "valor": "$60",
-            "disponibilidad": "true"
-        },
-        {
-            "gameName": "Animal Crossing: New Horizons",
-            "ID": "13",
-            "consola": "Nintendo",
-            "version": "Estándar",
-            "categoría": [ "Simulación","Social","Mundo Abierto"],
-            "Año lanzamiento": "2020",
-            "valor": "$60",
-            "disponibilidad": "true"
-        },
-        {
-            "gameName": "Mario Kart 8 Deluxe",
-            "ID": "14",
-            "consola": "Nintendo",
-            "version": "Estándar",
-            "categoría": ["Carreras","Acción","Multijugador"],
-            "Año lanzamiento": "2017",
-            "valor": "$60",
-            "disponibilidad": "true"
-        },
-        {
-            "gameName": "Splatoon 3",
-            "ID": "15",
-            "consola": "Nintendo",
-            "version": "Estándar",
-            "categoría": ["Shooter","Acción","Multijugador"],
-            "Año lanzamiento": "2022",
-            "valor": "$60",
-            "disponibilidad": "true"
-        }
-    ]
+  "VideoJuegosRegistrados": [
+    {
+      "gameName": "Demon's Souls",
+      "ID": "1",
+      "consola": "PlayStation 5",
+      "version": "Remake",
+      "categoría": [
+        "Acción",
+        "RPG",
+        "Aventura"
+      ],
+      "Año lanzamiento": "2020",
+      "valor": "$70",
+      "disponibilidad": "true"
+    },
+    {
+      "gameName": "Ratchet & Clank: Rift Apart",
+      "ID": "2",
+      "consola": "PlayStation 5",
+      "version": "Remake",
+      "categoría": [
+        "Acción",
+        "Plataforma",
+        "Aventura"
+      ],
+      "Año lanzamiento": "2021",
+      "valor": "$60",
+      "disponibilidad": "true"
+    },
+    {
+      "gameName": "Horizon Forbidden West",
+      "ID": "3",
+      "consola": "PlayStation 5",
+      "version": "Remake",
+      "categoría": [
+        "Acción",
+        "RPG",
+        "Aventura"
+      ],
+      "Año lanzamiento": "2022",
+      "valor": "$70",
+      "disponibilidad": "false"
+    },
+    {
+      "gameName": "Returnal",
+      "ID": "4",
+      "consola": "PlayStation 5",
+      "version": "Estándar",
+      "categoría": [
+        "Acción",
+        "Shooter",
+        "Roguelike"
+      ],
+      "Año lanzamiento": "2021",
+      "valor": "$60",
+      "disponibilidad": "false"
+    },
+    {
+      "gameName": "Spider-Man: Miles Morales",
+      "ID": "5",
+      "consola": "PlayStation 5",
+      "version": "Ultimate Edition",
+      "categoría": [
+        "Acción",
+        "Aventura",
+        "Superhéroes"
+      ],
+      "Año lanzamiento": "2020",
+      "valor": "$70",
+      "disponibilidad": "false"
+    },
+    {
+      "gameName": "Halo Infinite",
+      "ID": "6",
+      "consola": "Xbox",
+      "version": "Estándar",
+      "categoría": [
+        "Shooter",
+        "Acción",
+        "Ciencia Ficción"
+      ],
+      "Año lanzamiento": "2021",
+      "valor": "$60",
+      "disponibilidad": "true"
+    },
+    {
+      "gameName": "Forza Horizon 5",
+      "ID": "7",
+      "consola": "Xbox",
+      "version": "Estándar",
+      "categoría": [
+        "Carreras",
+        "Simulación",
+        "Mundo Abierto"
+      ],
+      "Año lanzamiento": "2021",
+      "valor": "$60",
+      "disponibilidad": "true"
+    },
+    {
+      "gameName": "Fable",
+      "ID": "8",
+      "consola": "Xbox",
+      "version": "Próxima",
+      "categoría": [
+        "RPG",
+        "Aventura",
+        "Fantasía"
+      ],
+      "Año lanzamiento": "2024",
+      "valor": "$70",
+      "disponibilidad": "false"
+    },
+    {
+      "gameName": "Gears 5",
+      "ID": "9",
+      "consola": "Xbox",
+      "version": "Estándar",
+      "categoría": [
+        "Shooter",
+        "Acción",
+        "Estrategia"
+      ],
+      "Año lanzamiento": "2019",
+      "valor": "$40",
+      "disponibilidad": "true"
+    },
+    {
+      "gameName": "Sea of Thieve",
+      "ID": "10",
+      "consola": "Xbox",
+      "version": "Estándar",
+      "categoría": [
+        "Multijugador",
+        "Aventura",
+        "Piratas"
+      ],
+      "Año lanzamiento": "2018",
+      "valor": "$40",
+      "disponibilidad": "true"
+    },
+    {
+      "gameName": "The Legend of Zelda: Tears of the Kingdom",
+      "ID": "11",
+      "consola": "Nintendo",
+      "version": "Estándar",
+      "categoría": [
+        "Aventura",
+        "Acción",
+        "Mundo Abierto"
+      ],
+      "Año lanzamiento": "2023",
+      "valor": "$70",
+      "disponibilidad": "true"
+    },
+    {
+      "gameName": "Super Mario Odyssey",
+      "ID": "12",
+      "consola": "Nintendo",
+      "version": "Estándar",
+      "categoría": [
+        "Plataforma",
+        "Aventura",
+        "Acción"
+      ],
+      "Año lanzamiento": "2017",
+      "valor": "$60",
+      "disponibilidad": "true"
+    },
+    {
+      "gameName": "Animal Crossing: New Horizons",
+      "ID": "13",
+      "consola": "Nintendo",
+      "version": "Estándar",
+      "categoría": [
+        "Simulación",
+        "Social",
+        "Mundo Abierto"
+      ],
+      "Año lanzamiento": "2020",
+      "valor": "$60",
+      "disponibilidad": "true"
+    },
+    {
+      "gameName": "Mario Kart 8 Deluxe",
+      "ID": "14",
+      "consola": "Nintendo",
+      "version": "Estándar",
+      "categoría": [
+        "Carreras",
+        "Acción",
+        "Multijugador"
+      ],
+      "Año lanzamiento": "2017",
+      "valor": "$60",
+      "disponibilidad": "true"
+    },
+    {
+      "gameName": "Splatoon 3",
+      "ID": "15",
+      "consola": "Nintendo",
+      "version": "Estándar",
+      "categoría": [
+        "Shooter",
+        "Acción",
+        "Multijugador"
+      ],
+      "Año lanzamiento": "2022",
+      "valor": "$60",
+      "disponibilidad": "true"
+    },
+    {
+      "gameName": "Test nuevo juego",
+      "ID": "3",
+      "consola": "PlayStation 5",
+      "version": "Remake",
+      "categoría": [
+        "Acción",
+        "RPG",
+        "Aventura"
+      ],
+      "Año lanzamiento": "2022",
+      "valor": "$70",
+      "disponibilidad": "true"
+    }
+  ]
 }
