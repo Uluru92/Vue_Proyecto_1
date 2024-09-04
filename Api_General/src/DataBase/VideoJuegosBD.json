@@ -29,7 +29,7 @@
             "categoría": ["Acción","RPG","Aventura"],
             "Año lanzamiento": "2022",
             "valor": "$70",
-            "disponibilidad": "true"
+            "disponibilidad": "false"
         },
         {
             "gameName": "Returnal",

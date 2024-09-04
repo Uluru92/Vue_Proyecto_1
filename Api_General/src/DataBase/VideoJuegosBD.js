@@ -1,4 +1,5 @@
 const path = require('path');
+const fs = require('fs');
 
 const db_archivo_directorio = path.join(__dirname, '../DataBase/VideoJuegosBD.json')
 
@@ -16,6 +17,18 @@ const ObtenerTodosLosVideoJuegos = () =>
     
 }
 
+const GuardarVideoJuego = (VideoJuego) => {
+    try {
+        let informacionVideoJuegos = require(db_archivo_directorio);
+        informacionVideoJuegos.VideoJuegosRegistrados.push(VideoJuego);
+        fs.writeFileSync(db_archivo_directorio, JSON.stringify(informacionVideoJuegos, null, 2))
+    }
+    catch (error) {
+        return error;
+    }    
+}
+
 module.exports = {
-    ObtenerTodosLosVideoJuegos
+    ObtenerTodosLosVideoJuegos,
+    GuardarVideoJuego
 }

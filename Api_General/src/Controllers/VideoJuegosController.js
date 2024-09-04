@@ -10,11 +10,12 @@ const ObtenerTodosLosVideoJuegos = (req, res) =>
 const ValidarDisponibilidad = (req, res) =>
 {
     console.log('Hola', req.body);
-    
+
     const informacionVideoJuego = req.body;
     const TodosLosVideoJuegos = VideoJuegosBD.ObtenerTodosLosVideoJuegos();
-    const DisponibilidadVideoJuego = TodosLosVideoJuegos.some(x => x.disponibilidad === informacionVideoJuego.disponibilidad)
-
+    const DisponibilidadVideoJuego = TodosLosVideoJuegos.some(x => x.disponibilidad === informacionVideoJuego.disponibilidad
+        && x.gameName === informacionVideoJuego.gameName)
+    
     let codigoDisponibilidad = 0;
     let descripcionDisponibilidad = "Video juego disponible"
     
@@ -30,7 +31,11 @@ const ValidarDisponibilidad = (req, res) =>
     }
 
     res.send(DetalleDisponibilidad)
+}
 
+const GuardarVideoJuego = (req, res) =>
+{
+    VideoJuegosBD.
 }
 
 module.exports = {
