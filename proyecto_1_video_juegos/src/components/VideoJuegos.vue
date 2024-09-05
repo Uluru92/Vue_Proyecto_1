@@ -1,5 +1,4 @@
 <template>
-
     <div style="background-color:greenyellow; margin: 2px; padding: 15px;">
         <h1>Video Games!</h1>
         <h3>Select your favorite console:</h3>
@@ -8,7 +7,6 @@
         <button class="btn btn-primary" @click="MostrarJuegosNintendo" style="margin: 10px; width: 180px; height: 60px;"><h4>{{Consola3}}</h4></button>
         <h6>{{ mensaje }}</h6>
     </div>
-
 </template>
 
 <script>
