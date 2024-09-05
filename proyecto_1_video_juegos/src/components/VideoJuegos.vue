@@ -1,11 +1,14 @@
 <template>
 
-    <h1>Video Games!</h1>
-    <h3>Select your favorite console:</h3>
-    <button @click="MostrarJuegosPlayStation5" style="margin: 10px; width: 120px;"><h4>{{Consola1}}</h4></button>
-    <button @click="MostrarJuegosXbox" style="margin: 10px; width: 120px;"><h4>{{Consola2}}</h4></button>
-    <button @click="MostrarJuegosNintendo" style="margin: 10px; width: 120px;"><h4>{{Consola3}}</h4></button>
-    <h6>{{ mensaje }}</h6>
+    <div style="background-color:greenyellow; margin: 2px; padding: 15px;">
+        <h1>Video Games!</h1>
+        <h3>Select your favorite console:</h3>
+        <button class="btn btn-primary" @click="MostrarJuegosPlayStation5" style="margin: 10px; width: 180px; height: 60px;"><h4>{{Consola1}}</h4></button>
+        <button class="btn btn-primary" @click="MostrarJuegosXbox" style="margin: 10px; width: 180px; height: 60px;"><h4>{{Consola2}}</h4></button>
+        <button class="btn btn-primary" @click="MostrarJuegosNintendo" style="margin: 10px; width: 180px; height: 60px;"><h4>{{Consola3}}</h4></button>
+        <h6>{{ mensaje }}</h6>
+    </div>
+
 </template>
 
 <script>

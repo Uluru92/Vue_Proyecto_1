@@ -10,6 +10,8 @@
   Consola2="Xbox"
   Consola3="Nintendo"
   ></VideoJuegos>
+  <ContactoSolicitudes
+  Visitor="Adolfo"></ContactoSolicitudes>
 </template>
 
 <script>
@@ -17,6 +19,7 @@
 import WelcomePage from './components/WelcomePage.vue';
 import NoticiasPage from './components/NoticiasPage.vue'
 import VideoJuegos from './components/VideoJuegos.vue';
+import ContactoSolicitudes from './components/ContactoSolicitudes.vue';
 
 
 export default {
@@ -24,7 +27,8 @@ export default {
   components: {
     WelcomePage,
     NoticiasPage,
-    VideoJuegos
+    VideoJuegos,
+    ContactoSolicitudes
   }
 }
 </script>
