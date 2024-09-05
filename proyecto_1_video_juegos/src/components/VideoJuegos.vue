@@ -5,7 +5,7 @@
     <button @click="MostrarJuegosPlayStation5" style="margin: 10px; width: 120px;"><h4>{{Consola1}}</h4></button>
     <button @click="MostrarJuegosXbox" style="margin: 10px; width: 120px;"><h4>{{Consola2}}</h4></button>
     <button @click="MostrarJuegosNintendo" style="margin: 10px; width: 120px;"><h4>{{Consola3}}</h4></button>
-
+    <h6>{{ mensaje }}</h6>
 </template>
 
 <script>
@@ -19,15 +19,20 @@ export default
         methods:
         {
             MostrarJuegosPlayStation5() {
-                alert(`Estos son los video juegos de la consola ${this.Consola1}`)
+                this.mensaje = `Estos son los video juegos de la consola ${this.Consola1}`;
             },
             MostrarJuegosXbox() {
-                alert(`Estos son los video juegos de la consola ${this.Consola2}`)
+                this.mensaje = `Estos son los video juegos de la consola ${this.Consola2}`;
             },
             MostrarJuegosNintendo() {
-                alert(`Estos son los video juegos de la consola ${this.Consola3}`)
+                this.mensaje = `Estos son los video juegos de la consola ${this.Consola3}`;
             },
-
+        },
+        data()
+        {
+            return {
+                mensaje:""
+            }
         }
     }
 </script>
