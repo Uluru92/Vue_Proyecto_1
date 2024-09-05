@@ -1,8 +1,11 @@
 <template>
     <div class="container">
-        <p1>News!</p1>
-        <p3>Get updated witp us! Wpat you need to know, tpe last news of tpe eSports World Game:</p3>
+        <div class="introductionNews">
+            <p1>NEWS SECTION</p1>
+            <br>
+            <p3>Get updated witp us! Wpat you need to know, tpe last news of tpe eSports World Game:</p3>
         <br>
+        </div>
         <div class="contenedorNoticia">
             <p class="contenedorTitulo">1: {{Noticia1}} </p>
             <img class="contenedorImagen" :src="require(`../assets/img/${imagenNoticia1}`)">
@@ -42,18 +45,21 @@ export default
 <style>
     .contenedorNoticia
     {
+        align-items: center;
+        object-position: center;
         width: 1000px;
         height: 800px;
         margin: 10px 15px 80px;
-        background-color: rgb(255, 171, 171);
-        box-shadow:60px 50px 40px rgb(255, 0, 0); 
+        background-color: rgb(0, 0, 0);
+        box-shadow:60px 50px 40px rgb(0, 242, 255);
+        color: aliceblue;
     }
 
     .contenedorTitulo
     {
         padding: 30px;
         font-size: 25px;
-        color: rgb(0, 0, 0)
+        color: rgb(0, 221, 255)
     }
 
     .contenedorImagen
@@ -71,5 +77,16 @@ export default
         padding: 10px;
 
 
+    }
+    .introductionNews{
+        text-align:justify;
+        padding: 30px;
+        font-size: 20px;
+        color: rgb(255, 0, 247);
+        width: 1000px;
+        background-color: black;
+        margin-left: 15px;
+        margin-right: 15px;
+        box-shadow:60px 50px 40px rgb(255, 0, 247);
     }
 </style>
