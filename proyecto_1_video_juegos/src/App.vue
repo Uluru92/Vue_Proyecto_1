@@ -1,16 +1,30 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
+  <img alt="Vue logo" src="./assets/BlackMythWukong.jpg">
   <WelcomePage></WelcomePage>
-
+  <NoticiasPage
+  Noticia1="Spacestation Gaming take ALGS Split 2 Playoff title"
+  Noticia2= "Black Myth: Wukong has sold 10 million units across all platforms"
+  Noticia3="Gen.G champions HBCU students pursuing gaming and esports careers"></NoticiasPage>
+  <VideoJuegos
+  Consola1="Play Station 5"
+  Consola2="Xbox"
+  Consola3="Nintendo"
+  ></VideoJuegos>
 </template>
 
 <script>
-import WelcomePage from './components/WelcomePage.vue'
+
+import WelcomePage from './components/WelcomePage.vue';
+import NoticiasPage from './components/NoticiasPage.vue'
+import VideoJuegos from './components/VideoJuegos.vue';
+
 
 export default {
   name: 'App',
   components: {
-    WelcomePage
+    WelcomePage,
+    NoticiasPage,
+    VideoJuegos
   }
 }
 </script>

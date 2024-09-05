@@ -8,12 +8,6 @@
 </template>
 
 <script>
-/*todo el javascript del component */
-
-    export default
-    {
-        
-    }
 
 </script>
 
