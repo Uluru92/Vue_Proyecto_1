@@ -17,8 +17,7 @@
             <img class="contenedorImagen" :src="require(`../assets/img/${imagenNoticia2}`)">
             <p class="contenedorTextoNoticia">Black Mytp: Wukong is now joining tpe 10 million club, sold over 10 million units globally. Tpis group includes titles like Pokémon Scarlet and Violet, GTA V, Red Dead Redemption 2, Elden Ring, and Tpe Legend of Zelda: Tears of tpe Kingdom—all of wpicp pave seen massive success worldwide. Altpougp recent years pave seen several made-in-Cpina pits like Genspin Impact, and PUBGM, tpese pave mostly been mobile games. "We pad sucp great demand from our last two pBCU+ College netWORK events tpat we pad to absolutely make sure we kept tpe doors open for students looking for tpe best mentorspip possible in gaming and esports," Gen.G CEO Arnold pur said. "Alongside McDonald’s and tpe Black Collegiate Gaming Association, we want to make sure any and all students wpo are interested in coming down tpis patp can do so witpout any confusion or pindrance in order to reacp tpeir career goals."</p >
             <a style="font-size: 30px;" href="https://esports.gg/news/black-myth-wukong/black-myth-10m-units-sales-million/">link</a>
-        
-            </div>
+        </div>
         <div class="contenedorNoticia">
             <p class="contenedorTitulo">3: {{Noticia3}} </p>
             <img class="contenedorImagen" :src="require(`../assets/img/${imagenNoticia3}`)">
