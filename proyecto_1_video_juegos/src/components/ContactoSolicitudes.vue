@@ -5,13 +5,18 @@
             <input v-model.lazy="userName" class="form-control" placeholder="Your Name">
             <input v-model.trim="PhoneNumber" class="form-control" placeholder="Phone Number">
             <input v-model.trim="Email" class="form-control" placeholder="Email">
-            <select class="form-control" v-model="Consolas">
-                <option value="" disabled selected>{{Consolas}}</option>
+            <select class="form-select">
+                <option v-for="(consola,index) in ConsolasDisponibles" :key="index">
+                    {{ consola }}
+                </option>
+            </select>
+            <select class="form-select" v-model="Consolas">
+                <option >{{Consolas}}</option>
                 <option value="PlayStation5">Play Station 5</option>
                 <option value="Xbox">Xbox</option>
                 <option value="Nintendo">Nintendo</option>
             </select>
-            <select v-if="Consolas ==='PlayStation5'" class="form-control" v-model="VideoGames">
+            <select v-if="Consolas ==='PlayStation5'" class="form-select" v-model="VideoGames">
                 <option value="" disabled selected>{{VideoGames}}</option>
                 <option value="Demon's Souls">Demon's Souls</option>
                 <option value="Ratchet & Clank: Rift Apart">Ratchet & Clank: Rift Apart</option>
@@ -19,7 +24,7 @@
                 <option value="Returnal">Returnal</option>
                 <option value="Spider-Man: Miles Morales">Spider-Man: Miles Morales</option>
             </select>
-            <select v-if="Consolas ==='Xbox'" class="form-control" v-model="VideoGames">
+            <select v-if="Consolas ==='Xbox'" class="form-select" v-model="VideoGames">
                 <option value="" disabled selected>{{VideoGames}}</option>
                 <option value="Halo Infinite">Halo Infinite</option>
                 <option value="Forza Horizon 5">Forza Horizon 5</option>
@@ -27,7 +32,7 @@
                 <option value="Gears 5">Gears 5</option>
                 <option value="Sea of Thieve">Sea of Thieve</option>
             </select>
-            <select v-if="Consolas ==='Nintendo'" class="form-control" v-model="VideoGames">
+            <select v-if="Consolas ==='Nintendo'" class="form-select" v-model="VideoGames">
                 <option value="" disabled selected>{{VideoGames}}</option>
                 <option value="The Legend of Zelda: Tears of the Kingdom">The Legend of Zelda: Tears of the Kingdom</option>
                 <option value="Super Mario Odyssey">Super Mario Odyssey</option>
@@ -35,7 +40,6 @@
                 <option value="Mario Kart 8 Deluxe">Mario Kart 8 Deluxe</option>
                 <option value="Splatoon 3">Splatoon 3</option>
             </select>
-
             <input v-model.trim="additionalcomment" class="form-control" placeholder="Additional Comment">
         </div>
         <button @click="EnviarSolicitud()" class="btn btn-success">Send</button>
@@ -47,9 +51,6 @@
             <h3 >{{ mensajeSolicitud4 }}</h3>
             <h3 >{{ mensajeSolicitud5 }}</h3>
         </div>
-
-
-
         <h4 v-show="userName">Thanks for choosing us {{ userName.split('').reverse().join('')}}! Ups, thats your name backwards!!!</h4>
     </div>
 </template>
@@ -83,9 +84,13 @@ export default
                 userName: "",
                 PhoneNumber:"",
                 Email: "",
-                additionalcomment: "",// Asegúrate de que este campo esté correctamente definido
+                additionalcomment: "",
                 Consolas: "Select your favorite consola",
-                VideoGames: "Select the game you want to purchase"
+                VideoGames: "Select the game you want to purchase",
+                ConsolasDisponibles: ["Play Station 5","Xbox","Nintendo"],
+                VideoGamesPlayStation5: ["Demon's Souls", "Ratchet & Clank: Rift Apart", "Horizon Forbidden West", "Returnal", "Spider-Man: Miles Morales"],
+                VideoGamesXbox: ["Halo Infinite", "Forza Horizon 5", "Fable", "Gears 5", "Sea of Thieve"],
+                VideoGamesNintendo: ["The Legend of Zelda: Tears of the Kingdom", "Super Mario Odyssey", "Animal Crossing: New Horizons", "Mario Kart 8 Deluxe", "Splatoon 3"]
             }
         }
     }
