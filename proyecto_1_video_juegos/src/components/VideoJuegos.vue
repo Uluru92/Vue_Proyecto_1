@@ -1,6 +1,6 @@
 <template>
     <div class="container">
-        <div style="background-color:greenyellow; margin: 2px; padding: 15px;">
+        <div class="contenedorVideoGames">
             <h1>Video Games!</h1>
             <h3>Select your favorite console:</h3>
             <button class="btn btn-primary" @click="MostrarJuegosPlayStation5" style="margin: 10px; width: 180px; height: 60px;"><h4>{{Consola1}}</h4></button>
@@ -42,5 +42,14 @@ export default
 </script>
 
 <style>
-/*Todas las etiquetas de estilo*/
+    .contenedorVideoGames
+    {
+        align-items: center;
+        object-position: center;
+        margin: 10px 0px 70px;
+        padding: 10px;
+        background-color: rgb(0, 0, 0);
+        box-shadow:60px 50px 40px rgb(255, 253, 119);
+        color: aliceblue;
+    }
 </style>

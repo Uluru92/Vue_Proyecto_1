@@ -1,8 +1,8 @@
 <template>
   <img alt="Vue logo" src="./assets/img/BlackMythWukong.jpg">
-  <WelcomePage>
-    
-  </WelcomePage>
+  <WelcomePage 
+  ImagenMonkeyKing="MonkeyKing.jpg"
+  ></WelcomePage>
   <NoticiasPage
   Noticia1="Spacestation Gaming take ALGS Split 2 Playoff title"
   Noticia2= "Black Myth: Wukong has sold 10 million units across all platforms"

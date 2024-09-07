@@ -74,9 +74,9 @@ export default
         text-align:justify;
         padding: 30px;
         font-size: 23px;
-        color: rgb(255, 0, 247);
+        color: rgb(0, 242, 255);
         background-color: black;
-        box-shadow:60px 50px 40px rgb(255, 0, 247);
+        box-shadow:60px 50px 40px rgb(0, 242, 255);
         margin: 10px 0px 30px;
     }
 </style>

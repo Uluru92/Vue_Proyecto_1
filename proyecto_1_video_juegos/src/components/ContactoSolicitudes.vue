@@ -2,7 +2,7 @@
     <div class="container">
       <div class="contenedorSolicitud">    
             <h1>{{Visitor}} Submit your request now!</h1>
-            <div style="margin: 10px;">
+            <div>
                 <input v-model.lazy="userName" class="form-control" placeholder="Your Name">
                 <input v-model.trim="PhoneNumber" class="form-control" placeholder="Phone Number">
                 <input v-model.trim="Email" class="form-control" placeholder="Email">
