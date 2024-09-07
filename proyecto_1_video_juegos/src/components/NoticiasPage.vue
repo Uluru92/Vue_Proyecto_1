@@ -46,7 +46,6 @@ export default
     {
         align-items: center;
         object-position: center;
-        width: 1000px;
         height: 800px;
         margin: 10px 0px 70px;
         background-color: rgb(0, 0, 0);
@@ -76,7 +75,6 @@ export default
         padding: 30px;
         font-size: 23px;
         color: rgb(255, 0, 247);
-        width: 1000px;
         background-color: black;
         box-shadow:60px 50px 40px rgb(255, 0, 247);
         margin: 10px 0px 30px;
