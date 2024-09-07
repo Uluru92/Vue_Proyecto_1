@@ -20,13 +20,13 @@ export default
         methods:
         {
             MostrarJuegosPlayStation5() {
-                this.mensaje = `Estos son los video juegos de la consola ${this.Consola1}`;
+                this.mensaje = `Estos son los video juegos de la consola: ${this.Consola1}`;
             },
             MostrarJuegosXbox() {
-                this.mensaje = `Estos son los video juegos de la consola ${this.Consola2}`;
+                this.mensaje = `Estos son los video juegos de la consola: ${this.Consola2}`;
             },
             MostrarJuegosNintendo() {
-                this.mensaje = `Estos son los video juegos de la consola ${this.Consola3}`;
+                this.mensaje = `Estos son los video juegos de la consola: ${this.Consola3}`;
             },
         },
         data()
