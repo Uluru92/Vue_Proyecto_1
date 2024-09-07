@@ -1,7 +1,7 @@
 <template>
     <div class="container">
         <div class="introductionNews">
-            <p1>NEWS SECTION</p1>
+            <p1>NEWS SECTION!</p1>
             <br>
             <p3>Get updated witp us! Wpat you need to know, tpe last news of tpe eSports World Game:</p3>
         <br>
