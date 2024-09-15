@@ -11,6 +11,10 @@
   </div>
 </template>
 
+<script lang="ts">
+
+</script>
+
 <style>
     .contenedorIntro
     {

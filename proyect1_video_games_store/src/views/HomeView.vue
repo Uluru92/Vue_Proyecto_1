@@ -3,8 +3,6 @@
     <img alt="Vue logo" src="../assets/img/MonkeyKing.jpg">
     <HelloWorld msg="Welcome to Uluru eSport Store"/>
   </div>
-
-  
 </template>
 
 <script lang="ts">

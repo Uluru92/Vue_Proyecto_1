@@ -1,7 +1,11 @@
+<script setup lang="ts">
+import NewsView from './views/NewsView.vue';
+</script>
+
 <template>
   <nav>
     <router-link to="/">Home</router-link> |
-    <router-link to="/welcome">Welcome</router-link>
+    <router-link to="/welcome">Welcome</router-link> |
     <router-link to="/news">News</router-link>
   </nav>
   <router-view/>
