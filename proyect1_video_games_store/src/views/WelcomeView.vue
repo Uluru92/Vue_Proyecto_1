@@ -17,7 +17,6 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        
         margin: 10px 0px 70px;
         background-color: rgb(0, 0, 0);
         box-shadow:60px 50px 40px rgb(255, 0, 0);
@@ -25,7 +24,7 @@
     }
     .contenedorTexto
     {
-        text-align: center;
+        text-align:justify;
         padding: 40px;
     }
     .contenedorNombreStore
