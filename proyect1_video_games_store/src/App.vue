@@ -7,6 +7,9 @@ import NewsView from './views/NewsView.vue';
     <router-link to="/">Home</router-link> |
     <router-link to="/welcome">Welcome</router-link> |
     <router-link to="/news">News</router-link>
+    <NewsView
+    Noticia1="Spacestation Gaming take ALGS Split 2 Playoff title">
+    </NewsView>
   </nav>
   <router-view/>
 </template>
