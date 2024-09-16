@@ -6,14 +6,9 @@
             <h3>Select your favorite console:</h3>
             <button class="btn btn-primary" @click="MensajeJuegosPlayStation5(); habilitarMostrarMensaje()"><h4>{{Consola1}}</h4></button>
             <button class="btn btn-primary" @click="MensajeJuegosXbox(); habilitarMostrarMensaje()" ><h4>{{Consola2}}</h4></button>
-            <button class="btn btn-primary" @click="MensajeJuegosNintendo(); habilitarMostrarMensaje()"><h4>{{Consola3}}</h4></button>
-            
-            {{  }}
-            <h6 v-if="monstrarMensaje">{{ mensaje }}</h6>
+            <button class="btn btn-primary" @click="MensajeJuegosNintendo(); habilitarMostrarMensaje()"><h4>{{Consola3}}</h4></button>    
+            <h6 v-if="!monstrarMensaje">{{ mensaje }}</h6>
             <h6 v-else></h6>
-
-            
-
         </div>
     </div>
 </template>
