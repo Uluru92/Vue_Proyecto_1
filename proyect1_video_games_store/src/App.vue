@@ -4,15 +4,14 @@
 
 <template>
   <nav>
-    <router-link to="/welcome">Welcome</router-link> |
+    <router-link to="/">Welcome</router-link> |
     <router-link to="/news">News</router-link> |
+    <router-link to="/consolas">Video Games</router-link> |
     <router-link to="/request">Request</router-link> |
-    <router-link to="/">General</router-link> |
     <router-link to="/almacenamiento">Almacenamiento</router-link> |
     <router-link to="/directivas">Directivas</router-link> |
     <router-link to="/emits">Emits</router-link> |
     <router-link to="/login">Login</router-link> |
-
 
     <NewsView
     Noticia1="Spacestation Gaming take ALGS Split 2 Playoff title">
