@@ -32,7 +32,9 @@
                 </select>
                 <input v-model.trim="additionalcomment" class="form-control" placeholder="Additional Comment">
             </div>
-            <button @click="EnviarSolicitud()" class="btn btn-success">Send</button>
+            <br>
+            <b-button @click="EnviarSolicitud()" class="btn btn-success">Send</b-button>
+            <br>
             <div v-if="userName&&PhoneNumber&&Email&&Consolas" style="background-color:springgreen; margin: 10px; padding: 15px;">
                 <h3 style="color: azure;">Lets double check your info...</h3>
                 <h3 >{{ mensajeSolicitud1 }}</h3>
