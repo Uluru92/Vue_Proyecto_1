@@ -6,7 +6,7 @@
         <img class="contenedorImagenMonkeyKing" src=../assets/img/MonkeyKing.jpg>
         <ul class="contenedorTexto">
             <li v-for="(information,index) in basicInfo" :key="index">
-                {{ information }}
+             {{ information }}
             </li>
         </ul>
       </div>

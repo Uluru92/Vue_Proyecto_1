@@ -4,7 +4,7 @@ import NewsView from '../views/NewsView.vue'
 import AlmacenamientoView from '../views/AlmacenamientoView.vue'
 import DirectivasView from '../views/DirectivasView.vue'
 import EmitsView from '../views/EmitsView.vue'
-import FormulariosView from '../views/FormulariosView.vue'
+import RequestView from '../views/RequestView.vue'
 import GeneralView from '../views/GeneralView.vue'
 import LoginView from '../views/LoginView.vue'
 
@@ -36,9 +36,9 @@ const routes: Array<RouteRecordRaw> = [
     component: EmitsView
   },
   {
-    path: '/formularios',
-    name: 'formularios',
-    component: FormulariosView
+    path: '/request',
+    name: 'request',
+    component: RequestView
   },
   {
     path: '/',
