@@ -35,7 +35,7 @@
 
 <script lang="ts">
     import { defineComponent } from 'vue';
-    export default ({
+    export default defineComponent({
     props: {
         Noticia1: String,
         Noticia2: String,
