@@ -51,7 +51,12 @@ const routes: Array<RouteRecordRaw> = [
   {
     path: '/consolas',
     name: 'consolas',
-    component: ConsolasView
+    component: ConsolasView,
+    props: {
+      Consola1: "Play Station 5",
+      Consola2: "Xbox",
+      Consola3: "Nintendo",
+    }
   },
   {
     path: '/login',

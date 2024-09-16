@@ -25,12 +25,11 @@
             <a style="font-size: 30px;" href="https://esports.gg/news/esports/gen-g-champions-hbcu-students-pursuing-gaming-and-esports-careers/">link</a>
         </div>
     </div>
-
-
 </template>
 
 <script lang="ts">
     import { defineComponent } from 'vue';
+
     export default defineComponent({
     props: {
         Noticia1: String,

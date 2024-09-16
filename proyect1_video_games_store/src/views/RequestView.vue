@@ -50,6 +50,26 @@
 
 <script lang="ts">
     import { defineComponent } from 'vue';
+
+    interface ComponentData
+    {
+    mensajeSolicitud1: string,
+    mensajeSolicitud2: string,
+    mensajeSolicitud3: string,
+    mensajeSolicitud4: string,
+    mensajeSolicitud5: string,
+    userName: string,
+    PhoneNumber: string,
+    Email: string,
+    additionalcomment: string,
+    Consolas: string,
+    VideoGames: string,
+    ConsolasDisponibles: string[],
+    VideoGamesPlayStation5: string[],
+    VideoGamesXbox: string[],
+    VideoGamesNintendo: string[],
+    
+    }
     
     export default defineComponent({
         

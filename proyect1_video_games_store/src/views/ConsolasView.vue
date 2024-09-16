@@ -4,42 +4,56 @@
         <div class="contenedorVideoGames">
             <h1>Video Games!</h1>
             <h3>Select your favorite console:</h3>
-            <button class="btn btn-primary" @click="MostrarJuegosPlayStation5" style="margin: 10px; width: 180px; height: 60px;"><h4>{{Consola1}}</h4></button>
-            <button class="btn btn-primary" @click="MostrarJuegosXbox" style="margin: 10px; width: 180px; height: 60px;"><h4>{{Consola2}}</h4></button>
-            <button class="btn btn-primary" @click="MostrarJuegosNintendo" style="margin: 10px; width: 180px; height: 60px;"><h4>{{Consola3}}</h4></button>
-            <h6>{{ mensaje }}</h6>
+            <button class="btn btn-primary" @click="MensajeJuegosPlayStation5(); habilitarMostrarMensaje()"><h4>{{Consola1}}</h4></button>
+            <button class="btn btn-primary" @click="MensajeJuegosXbox(); habilitarMostrarMensaje()" ><h4>{{Consola2}}</h4></button>
+            <button class="btn btn-primary" @click="MensajeJuegosNintendo(); habilitarMostrarMensaje()"><h4>{{Consola3}}</h4></button>
+            
+            {{  }}
+            <h6 v-if="monstrarMensaje">{{ mensaje }}</h6>
+            <h6 v-else></h6>
+
+            
+
         </div>
     </div>
 </template>
 
 <script lang="ts">
     import { defineComponent } from 'vue';
+
+    interface ComponentData
+    {
+        mensaje: string,
+        mostrarMensaje: boolean,
+    }
         
     export default defineComponent({
 
-    props: {
-
-            
+        props: {
+        Consola1: String,
+        Consola2: String,
+        Consola3: String,
         },
         methods:
         {
-            MostrarJuegosPlayStation5() {
+            MensajeJuegosPlayStation5() {
                 this.mensaje = `Estos son los video juegos de la consola: ${this.Consola1}`;
             },
-            MostrarJuegosXbox() {
+            MensajeJuegosXbox() {
                 this.mensaje = `Estos son los video juegos de la consola: ${this.Consola2}`;
             },
-            MostrarJuegosNintendo() {
+            MensajeJuegosNintendo() {
                 this.mensaje = `Estos son los video juegos de la consola: ${this.Consola3}`;
             },
+            habilitarMostrarMensaje() {
+                this.monstrarMensaje = !this.monstrarMensaje;
+            }
         },
         data()
         {
             return {
-                mensaje: "",
-                Consola1:"Play Station 5",
-                Consola2:"Xbox",
-                Consola3:"Nintendo",
+                mensaje: "",  
+                monstrarMensaje: true,
             }
         }
         
@@ -56,5 +70,10 @@
         background-color: rgb(0, 0, 0);
         box-shadow:60px 50px 40px rgb(255, 253, 119);
         color: aliceblue;
+    }
+    .btn-primary  {
+        margin: 10px; 
+        width: 180px; 
+        height: 60px;
     }
 </style>
