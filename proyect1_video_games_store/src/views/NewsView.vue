@@ -12,6 +12,7 @@
             <img class="contenedorImagen" src="../assets/img/noticia1.jpg">
             <p class="contenedorTextoNoticia"> This was the first major title for Spacestation Gaming in the ALGS too. The organisation, with a different team, nearly took the ALGS Championship in 2022, but were denied by DarkZero. For the organisation, this win justifies their return to Apex Legends having exited in 2023. For the players, it marks a milestone at various points in their career. Phony announces himself as one of the leading IGL's in the ALGS. Koyful finally has his big breakthrough, proving why he is one of the highest rated youngsters in the entire game. Then for Xynew, he picks up a second LAN title. This draws him closer to the likes of Zer0 and Genburten. Very few players have won multiple ALGS LAN events. Elsewhere, Alliance and Gaimin Gladiators both put in very strong performances in Sundays Match Point finals. Combined, this performance could be very important for the EMEA region to secure more LAN slots in the future.</p>
             <a style="font-size: 30px;" href="https://esports.gg/news/apex-legends/spacestation-gaming-take-algs-split-2-playoff-title/">link</a>
+            <b-button variant="https://esports.gg/news/apex-legends/spacestation-gaming-take-algs-split-2-playoff-title/">Link2</b-button>
         </div>
     </div>
          <!-- 
@@ -33,19 +34,17 @@
 </template>
 
 <script lang="ts">
-
-export default
-    {
-        props: {
-            Noticia1: String,
-            Noticia2: String,
-            Noticia3: String,
-            imagenNoticia1: String,
-            imagenNoticia2: String,
-            imagenNoticia3: String
+    import { defineComponent } from 'vue';
+    export default ({
+    props: {
+        Noticia1: String,
+        Noticia2: String,
+        Noticia3: String,
+        imagenNoticia1: String,
+        imagenNoticia2: String,
+        imagenNoticia3: String
         }
-    }
-
+    })
 </script>
 
 <style>
