@@ -37,11 +37,11 @@
             <br>
             <div v-if="userName&&PhoneNumber&&Email&&Consolas" style="background-color:springgreen; margin: 10px; padding: 15px;">
                 <h3 style="color: azure;">Lets double check your info...</h3>
-                <h3 >{{ mensajeSolicitud1 }}</h3>
-                <h3 >{{ mensajeSolicitud2 }}</h3>
-                <h3 >{{ mensajeSolicitud3 }}</h3>
-                <h3 >{{ mensajeSolicitud4 }}</h3>
-                <h3 >{{ mensajeSolicitud5 }}</h3>
+                <h3 >{{ enviarSolicitud }}</h3>
+                <h3 >{{ phoneNumber }}</h3>
+                <h3 >{{ emailUser }}</h3>
+                <h3 >{{ consolaSelected }}</h3>
+                <h3 >{{ videoGameSelected }}</h3>
             </div>
             <h4 v-show="userName">Thanks for choosing us {{ userName.split('').reverse().join('')}}! Ups, thats your name backwards!!!</h4>
         </div>
@@ -53,11 +53,11 @@
 
     interface ComponentData
     {
-    mensajeSolicitud1: string,
-    mensajeSolicitud2: string,
-    mensajeSolicitud3: string,
-    mensajeSolicitud4: string,
-    mensajeSolicitud5: string,
+    enviarSolicitud: string,
+    phoneNumber: string,
+    emailUser: string,
+    consolaSelected: string,
+    videoGameSelected: string,
     userName: string,
     PhoneNumber: string,
     Email: string,
@@ -81,21 +81,21 @@
         {
             EnviarSolicitud()
             {
-                this.mensajeSolicitud1 = `Your request has been processed, please verify your contact info:`
-                this.mensajeSolicitud2 = `Phone Number: ${this.PhoneNumber}`
-                this.mensajeSolicitud3 = `Email: ${this.Email}`
-                this.mensajeSolicitud4 = `Consola: ${this.Consolas}`
-                this.mensajeSolicitud5 = `Vide Game: ${this.VideoGames}`
+                this.enviarSolicitud = `Your request has been processed, please verify your contact info:`
+                this.phoneNumber = `Phone Number: ${this.PhoneNumber}`
+                this.emailUser = `Email: ${this.Email}`
+                this.consolaSelected = `Consola: ${this.Consolas}`
+                this.videoGameSelected = `Vide Game: ${this.VideoGames}`
             }
         },
         data()
         {
             return {
-                mensajeSolicitud1: "",
-                mensajeSolicitud2: "",
-                mensajeSolicitud3: "",
-                mensajeSolicitud4: "",
-                mensajeSolicitud5: "",
+                enviarSolicitud: "",
+                phoneNumber: "",
+                emailUser: "",
+                consolaSelected: "",
+                videoGameSelected: "",
                 userName: "",
                 PhoneNumber:"",
                 Email: "",
