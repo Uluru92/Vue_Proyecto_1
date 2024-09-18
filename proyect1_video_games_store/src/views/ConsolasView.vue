@@ -1,5 +1,4 @@
 <template>
-    <h1>Estoy en General</h1>
     <div class="container">
         <div class="contenedorVideoGames">
             <h1>Video Games!</h1>
