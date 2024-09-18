@@ -34,15 +34,15 @@
             </div>
             <br>
             <b-button @click="EnviarSolicitud()" class="btn btn-success">Send</b-button>
-            <h6>{{ mensajeCamposObligatorios }}</h6>
             <br>
+            <br>
+            <h6 style="color: red;">{{ mensajeCamposObligatorios }}</h6>
             <h3 style="color: red;">{{enviarSolicitud}}</h3>
             <h3 >{{ phoneNumber }}</h3>
             <h3 >{{ emailUser }}</h3>
             <h3 >{{ consolaSelected }}</h3>
             <h3 >{{ videoGameSelected }}</h3>
-
-            <br>
+            <h3 >{{ additionalcomment }}</h3>
             <h4 v-show="userName_input">Thanks for choosing us {{ userName_input.split('').reverse().join('')}}! Ups, thats your name backwards!!!</h4>
         </div>
     </div>
@@ -85,7 +85,7 @@
             {
                 if (!this.userName_input || !this.PhoneNumber_input || !this.Email_input || this.Consolas == 'Select your favorite consola' || this.VideoGames == 'Select the game you want to purchase' || !this.additionalComment_input)
                     this.mensajeCamposObligatorios = "Please complete all blank spaces before sending your request!"
-                else if (this.userName_input!="" && this.PhoneNumber_input!="" &&this.Email_input!="" && this.Consolas != 'Select your favorite consola' || this.VideoGames != 'Select the game you want to purchase' && this.additionalcomment!="")
+                else if (this.userName_input!="" && this.PhoneNumber_input!="" &&this.Email_input!="" && this.Consolas != 'Select your favorite consola' || this.VideoGames != 'Select the game you want to purchase' && this.additionalComment_input!="")
                 {
                     this.mensajeCamposObligatorios = ""
                     this.enviarSolicitud = `Your request has been processed, please verify your contact info:`
