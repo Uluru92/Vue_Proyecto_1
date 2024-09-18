@@ -92,7 +92,7 @@
         object-position: center;
         margin: 10px 0px 70px;
         padding: 10px;
-        background-color: #ddff00;
+        background-color: rgb(221, 255, 0);
         box-shadow:60px 50px 40px rgb(0, 0, 0);
         color: rgb(0, 0, 0);
     }

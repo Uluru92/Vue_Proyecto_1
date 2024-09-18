@@ -3,9 +3,9 @@
       <div class="contenedorSolicitud">    
             <h1>{{Visitor}} Submit your request now!</h1>
             <div>
-                <input v-model.lazy="userName" class="form-control" placeholder="Your Name">
-                <input v-model.trim="PhoneNumber" class="form-control" placeholder="Phone Number">
-                <input v-model.trim="Email" class="form-control" placeholder="Email">
+                <input v-model.lazy="userName_input" class="form-control" placeholder="Your Name">
+                <input v-model.trim="PhoneNumber_input" class="form-control" placeholder="Phone Number">
+                <input v-model.trim="Email_input" class="form-control" placeholder="Email">
                 <select class="form-select" v-model="Consolas">
                     <option >{{Consolas}}</option>
                     <option v-for="(consola,index) in ConsolasDisponibles" :key="index">
@@ -30,20 +30,20 @@
                         {{ videogame }}
                     </option>
                 </select>
-                <input v-model.trim="additionalcomment" class="form-control" placeholder="Additional Comment">
+                <input v-model.trim="additionalComment_input" class="form-control" placeholder="Additional Comment">
             </div>
             <br>
             <b-button @click="EnviarSolicitud()" class="btn btn-success">Send</b-button>
+            <h6>{{ mensajeCamposObligatorios }}</h6>
             <br>
-            <div v-if="userName&&PhoneNumber&&Email&&Consolas" style="background-color:springgreen; margin: 10px; padding: 15px;">
-                <h3 style="color: azure;">Lets double check your info...</h3>
-                <h3 >{{ enviarSolicitud }}</h3>
-                <h3 >{{ phoneNumber }}</h3>
-                <h3 >{{ emailUser }}</h3>
-                <h3 >{{ consolaSelected }}</h3>
-                <h3 >{{ videoGameSelected }}</h3>
-            </div>
-            <h4 v-show="userName">Thanks for choosing us {{ userName.split('').reverse().join('')}}! Ups, thats your name backwards!!!</h4>
+            <h3 style="color: red;">{{enviarSolicitud}}</h3>
+            <h3 >{{ phoneNumber }}</h3>
+            <h3 >{{ emailUser }}</h3>
+            <h3 >{{ consolaSelected }}</h3>
+            <h3 >{{ videoGameSelected }}</h3>
+
+            <br>
+            <h4 v-show="userName_input">Thanks for choosing us {{ userName_input.split('').reverse().join('')}}! Ups, thats your name backwards!!!</h4>
         </div>
     </div>
 </template>
@@ -55,19 +55,21 @@
     {
     enviarSolicitud: string,
     phoneNumber: string,
+    PhoneNumber_input: string,
     emailUser: string,
+    Email_input: string,
     consolaSelected: string,
     videoGameSelected: string,
-    userName: string,
-    PhoneNumber: string,
-    Email: string,
+    userName_input: string,
     additionalcomment: string,
+    additionalComment_input: string,
     Consolas: string,
     VideoGames: string,
     ConsolasDisponibles: string[],
     VideoGamesPlayStation5: string[],
     VideoGamesXbox: string[],
     VideoGamesNintendo: string[],
+    mensajeCamposObligatorios: string,
     
     }
     
@@ -81,11 +83,18 @@
         {
             EnviarSolicitud()
             {
-                this.enviarSolicitud = `Your request has been processed, please verify your contact info:`
-                this.phoneNumber = `Phone Number: ${this.PhoneNumber}`
-                this.emailUser = `Email: ${this.Email}`
-                this.consolaSelected = `Consola: ${this.Consolas}`
-                this.videoGameSelected = `Vide Game: ${this.VideoGames}`
+                if (!this.userName_input || !this.PhoneNumber_input || !this.Email_input || this.Consolas == 'Select your favorite consola' || this.VideoGames == 'Select the game you want to purchase' || !this.additionalComment_input)
+                    this.mensajeCamposObligatorios = "Please complete all blank spaces before sending your request!"
+                else if (this.userName_input!="" && this.PhoneNumber_input!="" &&this.Email_input!="" && this.Consolas != 'Select your favorite consola' || this.VideoGames != 'Select the game you want to purchase' && this.additionalcomment!="")
+                {
+                    this.mensajeCamposObligatorios = ""
+                    this.enviarSolicitud = `Your request has been processed, please verify your contact info:`
+                    this.phoneNumber = `Phone Number: ${this.PhoneNumber_input}`
+                    this.emailUser = `Email: ${this.Email_input}`
+                    this.consolaSelected = `Consola: ${this.Consolas}`
+                    this.videoGameSelected = `Vide Game: ${this.VideoGames}`
+                    this.additionalcomment = `Additional comment: ${this.additionalComment_input}`
+                }
             }
         },
         data()
@@ -96,16 +105,18 @@
                 emailUser: "",
                 consolaSelected: "",
                 videoGameSelected: "",
-                userName: "",
-                PhoneNumber:"",
-                Email: "",
+                userName_input: "",
+                PhoneNumber_input:"",
+                Email_input: "",
                 additionalcomment: "",
+                additionalComment_input: "",
                 Consolas: "Select your favorite consola",
                 VideoGames: "Select the game you want to purchase",
                 ConsolasDisponibles: ["Play Station 5","Xbox","Nintendo"],
                 VideoGamesPlayStation5: ["Demon's Souls", "Ratchet & Clank: Rift Apart", "Horizon Forbidden West", "Returnal", "Spider-Man: Miles Morales"],
                 VideoGamesXbox: ["Halo Infinite", "Forza Horizon 5", "Fable", "Gears 5", "Sea of Thieve"],
-                VideoGamesNintendo: ["The Legend of Zelda: Tears of the Kingdom", "Super Mario Odyssey", "Animal Crossing: New Horizons", "Mario Kart 8 Deluxe", "Splatoon 3"]
+                VideoGamesNintendo: ["The Legend of Zelda: Tears of the Kingdom", "Super Mario Odyssey", "Animal Crossing: New Horizons", "Mario Kart 8 Deluxe", "Splatoon 3"],
+                mensajeCamposObligatorios: "",
             }
         }
     })
