@@ -64,14 +64,12 @@
     interface ComponentData
     {
     enviarSolicitud: string,
-    phoneNumber: string,
+
     PhoneNumber_input: string,
-    emailUser: string,
     Email_input: string,
     consolaSelected: string,
     videoGameSelected: string,
     userName_input: string,
-    additionalcomment: string,
     additionalComment_input: string,
     Consolas: string,
     VideoGames: string,
@@ -204,14 +202,11 @@ export default defineComponent({
         {
             return {
                 enviarSolicitud: "",
-                phoneNumber: "",
-                emailUser: "",
                 consolaSelected: "",
                 videoGameSelected: "",
                 userName_input: "",
                 PhoneNumber_input:"",
                 Email_input: "",
-                additionalcomment: "",
                 additionalComment_input: "",
                 Consolas: "Select your favorite consola",
                 VideoGames: "Select the game you want to purchase",
