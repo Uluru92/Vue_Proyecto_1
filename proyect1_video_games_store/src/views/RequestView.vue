@@ -53,7 +53,7 @@
             <br>
             <h3 :style="{color:RequestColor, backgroundColor:RequestBackColor}">{{enviarSolicitud}}</h3>
             <br>
-            <h4 v-if="this.joke===true" v-show="userName_input">Thanks for choosing us {{ userName_input.split('').reverse().join('')}}! Ups, thats your name backwards!!!</h4>
+            <h4 v-if="joke===true" v-show="userName_input">Thanks for choosing us {{ userName_input.split('').reverse().join('')}}! Ups, thats your name backwards!!!</h4>
         </div>
     </div>
 </template>
@@ -94,8 +94,7 @@
     CommentRequired_message: string,
     }
     
-    export default defineComponent({
-        
+export default defineComponent({        
         props:
         {
             Visitor: String,

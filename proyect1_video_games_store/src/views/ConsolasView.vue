@@ -10,10 +10,18 @@
             <h6 v-else></h6>
         </div>
     </div>
+    <PlayStation5Component></PlayStation5Component>
+    <NintendoComponent></NintendoComponent>
+    <XboxComponent></XboxComponent>
+    
 </template>
 
 <script lang="ts">
-    import { defineComponent } from 'vue';
+import { defineComponent } from 'vue';
+import PlayStation5Component from '@/components/PlayStation5Component.vue';
+import NintendoComponent from '@/components/NintendoComponent.vue';
+import XboxComponent from '@/components/XboxComponent.vue';
+
 
     interface ComponentData
     {
@@ -22,7 +30,12 @@
         colorConsola: string,
     }
         
-    export default defineComponent({
+export default defineComponent({
+        components: {
+        PlayStation5Component,
+        NintendoComponent,
+        XboxComponent,
+    },
 
         props: {
         Consola1: String,
