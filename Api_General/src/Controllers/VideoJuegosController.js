@@ -4,7 +4,6 @@ const ObtenerTodosLosVideoJuegos = (req, res) =>
 {
     const TodosLosVideoJuegos = VideoJuegosBD.ObtenerTodosLosVideoJuegos();
     res.send({ DetalleRespuesta: TodosLosVideoJuegos })
-
 }
 
 const ValidarDisponibilidad = (req, res) =>
@@ -23,13 +22,11 @@ const ValidarDisponibilidad = (req, res) =>
         codigoDisponibilidad = 99;
         descripcionDisponibilidad = "Video juego no disponible"
     }
-
     const DetalleDisponibilidad = 
     {
         Codigo: codigoDisponibilidad,
         Descripcion: descripcionDisponibilidad
     }
-
     res.send(DetalleDisponibilidad)
 }
 
@@ -38,8 +35,6 @@ const GuardarVideoJuego = (req, res) =>
     const nuevoVideoJuego = req.body;
     VideoJuegosBD.GuardarVideoJuego(nuevoVideoJuego);
     res.send("Hola")
-
-    
 }
 
 module.exports = {
