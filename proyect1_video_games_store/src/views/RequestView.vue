@@ -13,6 +13,8 @@
                 <input v-model.trim="Email_input" class="form-control" placeholder="Email" :style="{backgroundColor:EmailColor}">
                 <h3 v-if="EmailRequired">{{EmailRequired_message}}</h3>
                 
+                <select class="form-select" :style="{backgroundColor:ConsolaColor}"></select>
+                
                 <select class="form-select" v-model="Consolas" :style="{backgroundColor:ConsolaColor}">
                     <option >{{Consolas}}</option>
                     <option v-for="(consola,index) in ConsolasDisponibles" :key="index">
@@ -59,7 +61,8 @@
 </template>
 
 <script lang="ts">
-    import { defineComponent } from 'vue';
+    import { defineComponent, onMounted } from 'vue';
+    import axios from 'axios';
 
     interface ComponentData
     {
@@ -92,7 +95,9 @@
     CommentRequired_message: string,
     }
     
-export default defineComponent({        
+export default defineComponent({    
+
+    
         props:
         {
             Visitor: String,
@@ -197,7 +202,12 @@ export default defineComponent({
                         this.joke = true
                 }             
             },
+            async llamarApiConsolas()
+        {
+                const respuesta = await axios.get('http://localhost:3015/api/route/ObtenerTodosLosVideoJuegos')
+                console.log(respuesta)
         },
+    },
         data()
         {
             return {
@@ -236,8 +246,15 @@ export default defineComponent({
                 RequestColor: "red",
                 RequestBackColor: "white",
                 joke: false,
+                
+                vectorConsolas: [] as any,
             }
-        }
+    },
+    mounted()
+    {
+        this.llamarApiConsolas();
+    }
+
     })
 </script>
 
