@@ -5,13 +5,35 @@
             <button @click="showInfo(2)" class="buttonSelected">{{VideoGamesNintendo[1]}}</button>
             <button @click="showInfo(3)" class="buttonSelected">{{VideoGamesNintendo[2]}}</button>
             <button @click="showInfo(4)" class="buttonSelected">{{VideoGamesNintendo[3]}}</button>
-            <button @onclick="showInfo(5)" class="buttonSelected">{{VideoGamesNintendo[4]}}</button>
-        </div>    
-            <h1 v-if="showInfo_1===true">Año de lanzamiento: {{LanzamientoGame[0]}}</h1>
-            <h1 v-if="showInfo_2===true">Año de lanzamiento: {{LanzamientoGame[1]}}</h1>
-            <h1 v-if="showInfo_3===true">Año de lanzamiento: {{LanzamientoGame[2]}}</h1>
-            <h1 v-if="showInfo_4===true">Año de lanzamiento: {{LanzamientoGame[3]}}</h1>
-            <h1 v-if="showInfo_5===true">Año de lanzamiento: {{LanzamientoGame[4]}}</h1>
+            <button @click="showInfo(5)" class="buttonSelected">{{VideoGamesNintendo[4]}}</button>
+        </div>   
+        <div v-if="showInfo_1===true" class="GameSelect">
+            <h6>Video Game Selected -  {{VideoGamesNintendo[0]}}</h6>
+            <h6>Year: {{LanzamientoGame[0]}}</h6>
+            <img style="width: 50%; height: 50%;" class="contenedorImagen" src="../assets/img/nintendo.png">
+        </div>
+        <div v-if="showInfo_2===true" class="GameSelect">
+            <h6>Video Game Selected -  {{VideoGamesNintendo[1]}}</h6>
+            <h6>Year: {{LanzamientoGame[1]}}</h6>
+            <img style="width: 50%; height: 50%;" class="contenedorImagen" src="../assets/img/nintendo.png">
+        </div>
+        <div v-if="showInfo_3===true" class="GameSelect">
+            <h6>Video Game Selected -  {{VideoGamesNintendo[2]}}</h6>
+            <h6>Year: {{LanzamientoGame[2]}}</h6>
+            <img style="width: 50%; height: 50%;" class="contenedorImagen" src="../assets/img/nintendo.png">
+        </div>
+        <div v-if="showInfo_4===true" class="GameSelect">
+            <h6>Video Game Selected -  {{VideoGamesNintendo[3]}}</h6>
+            <h6>Year: {{LanzamientoGame[3]}}</h6>
+            <img style="width: 50%; height: 50%;" class="contenedorImagen" src="../assets/img/nintendo.png">
+        </div>
+        <div v-if="showInfo_5===true" class="GameSelect">
+            <h6>Video Game Selected -  {{VideoGamesNintendo[4]}}</h6>
+            <h6>Year: {{LanzamientoGame[4]}}</h6>
+            <img style="width: 50%; height: 50%;" class="contenedorImagen" src="../assets/img/nintendo.png">
+        </div>
+
+
     </div>
  </template>
 <script lang="ts">
@@ -138,6 +160,13 @@ export default defineComponent({
 }
 .buttonSelected:hover {
     color: #15ff00;
-    background-color: #000000;
+
+}
+.GameSelect 
+{
+    color: #000000;
+    background-color: #ffd000;
+    padding: 10px;
+    margin: 10px;
 }
 </style>
