@@ -201,6 +201,7 @@ export default defineComponent({
             async llamarApiVideoJuegos(){
                 const respuesta = await axios.get('http://localhost:3015/api/route/ObtenerTodosLosVideoJuegos')
                 console.log(respuesta);
+
                 this.vectorVideoJuegos = respuesta.data.DetalleRespuesta;
 
                 const vectorConsolas = [] as string[];
@@ -212,9 +213,44 @@ export default defineComponent({
                     }
                     this.ConsolasDisponibles = vectorConsolas      
                 }
-                console.log(this.ConsolasDisponibles)
-     
-            }
+
+                const vectorGameNamesPlayStation5 = [] as string[];
+                const vectorGameNamesXbox = [] as string[];
+                const vectorGameNamesNintendo = [] as string[];
+
+                for (let i = 0; i < this.vectorVideoJuegos.length; i++)
+                {
+                    if (this.vectorVideoJuegos[i].consola === "PlayStation 5")
+                    {
+                        const gameNameActual = this.vectorVideoJuegos[i].gameName;
+                        if (!vectorGameNamesPlayStation5.includes(gameNameActual))
+                        {
+                            vectorGameNamesPlayStation5.push(gameNameActual);
+                        }
+                        this.VideoGamesPlayStation5 = vectorGameNamesPlayStation5
+                    }
+
+                    if (this.vectorVideoJuegos[i].consola === "Xbox")
+                    {
+                        const gameNameActual = this.vectorVideoJuegos[i].gameName;
+                        if (!vectorGameNamesXbox.includes(gameNameActual))
+                        {
+                            vectorGameNamesXbox.push(gameNameActual);
+                        }
+                        this.VideoGamesXbox = vectorGameNamesXbox
+                    }
+
+                    if (this.vectorVideoJuegos[i].consola === "Nintendo")
+                    {
+                        const gameNameActual = this.vectorVideoJuegos[i].gameName;
+                        if (!vectorGameNamesNintendo.includes(gameNameActual))
+                        {
+                            vectorGameNamesNintendo.push(gameNameActual);
+                        }
+                        this.VideoGamesNintendo = vectorGameNamesNintendo
+                    }
+                }
+            },
     },
         data()
         {
@@ -229,9 +265,9 @@ export default defineComponent({
                 Consolas: "Select your favorite consola",
                 VideoGames: "Select the game you want to purchase",
                 ConsolasDisponibles: [] as string[],
-                VideoGamesPlayStation5: ["Demon's Souls", "Ratchet & Clank: Rift Apart", "Horizon Forbidden West", "Returnal", "Spider-Man: Miles Morales"],
-                VideoGamesXbox: ["Halo Infinite", "Forza Horizon 5", "Fable", "Gears 5", "Sea of Thieve"],
-                VideoGamesNintendo: ["The Legend of Zelda: Tears of the Kingdom", "Super Mario Odyssey", "Animal Crossing: New Horizons", "Mario Kart 8 Deluxe", "Splatoon 3"],
+                VideoGamesPlayStation5: [] as string[],
+                VideoGamesXbox: [] as string[],
+                VideoGamesNintendo: [] as string[],
                 mensajeCamposObligatorios: "",
                 userRequired: true,
                 userRequired_message: "",
