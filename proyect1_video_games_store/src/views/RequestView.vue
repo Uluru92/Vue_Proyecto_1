@@ -3,16 +3,12 @@
       <div class="contenedorSolicitud">    
             <h1>{{userName_input}} Submit your request now!</h1>
             <div>
-
                 <input v-model.lazy="userName_input" class="form-control" placeholder="Your Name" :style="{backgroundColor:userColor}">
                 <h3 v-if="userRequired">{{userRequired_message}}</h3>
-
                 <input v-model.trim="PhoneNumber_input" class="form-control" placeholder="Phone Number" :style="{backgroundColor:PhoneColor}">
-                <h3 v-if="PhoneRequired">{{PhoneRequired_message}}</h3>
-                
+                <h3 v-if="PhoneRequired">{{PhoneRequired_message}}</h3> 
                 <input v-model.trim="Email_input" class="form-control" placeholder="Email" :style="{backgroundColor:EmailColor}">
                 <h3 v-if="EmailRequired">{{EmailRequired_message}}</h3>
-                
                 <select @change="consolaEventSelect()" class="form-select" v-model="Consolas" :style="{backgroundColor:ConsolaColor}">
                     <option v-if="Consolas ==='Select your favorite consola'">{{Consolas}}</option>
                     <option v-for="(consola,index) in ConsolasDisponibles" :key="index">
@@ -20,7 +16,6 @@
                     </option>
                 </select>     
                 <h3 v-if="ConsolaRequired">{{ConsolaRequired_message}}</h3>
-
                 <select v-if="Consolas ==='PlayStation 5'" class="form-select" v-model="VideoGames" :style="{backgroundColor:VideoGamesColor}">
                     <option v-if="VideoGames ==='Select the game you want to purchase'">{{VideoGames}}</option>
                     <option v-for="(videogame,index) in VideoGamesPlayStation5" :key="index">
@@ -39,11 +34,9 @@
                         {{ videogame }}
                     </option>
                 </select>
-                <h3 v-if="VideoGameRequired">{{VideoGameRequired_message}}</h3>
-                
+                <h3 v-if="VideoGameRequired">{{VideoGameRequired_message}}</h3>        
                 <input v-model.trim="additionalComment_input" class="form-control" placeholder="Additional Comment" :style="{backgroundColor:CommentColor}">
                 <h3 v-if="CommentRequired">{{CommentRequired_message}}</h3>
-
             </div>
             <br>
             <b-button @click="SendRequest()" class="btn btn-success">Send</b-button>
@@ -94,7 +87,6 @@
     
 export default defineComponent({    
 
-    
         props:
         {
             Visitor: String,
@@ -233,7 +225,6 @@ export default defineComponent({
                         }
                         this.VideoGamesPlayStation5 = vectorGameNamesPlayStation5
                     }
-
                     if (this.vectorVideoJuegos[i].consola === "Xbox")
                     {
                         const gameNameActual = this.vectorVideoJuegos[i].gameName;
@@ -243,7 +234,6 @@ export default defineComponent({
                         }
                         this.VideoGamesXbox = vectorGameNamesXbox
                     }
-
                     if (this.vectorVideoJuegos[i].consola === "Nintendo")
                     {
                         const gameNameActual = this.vectorVideoJuegos[i].gameName;

@@ -32,8 +32,6 @@
             <h6>Year: {{LanzamientoGame[4]}}</h6>
             <img style="width: 50%; height: 50%;" class="contenedorImagen" src="../assets/img/playStation5.png">
         </div>
-
-
     </div>
  </template>
 <script lang="ts">
@@ -141,7 +139,6 @@ export default defineComponent({
             info_lanzamiento_3: "" as string,
             info_lanzamiento_4: "" as string,
             info_lanzamiento_5: "" as string,
-
         }
     },
     mounted()

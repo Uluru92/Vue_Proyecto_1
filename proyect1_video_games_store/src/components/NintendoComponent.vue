@@ -32,8 +32,6 @@
             <h6>Year: {{LanzamientoGame[4]}}</h6>
             <img style="width: 50%; height: 50%;" class="contenedorImagen" src="../assets/img/nintendo.png">
         </div>
-
-
     </div>
  </template>
 <script lang="ts">
@@ -51,7 +49,6 @@ export default defineComponent({
             this.vectorVideoJuegos = respuesta.data.DetalleRespuesta;
 
             const vectorGameNamesNintendo = [] as string[];
-
 
             for (let i = 0; i < this.vectorVideoJuegos.length; i++) {
                 if (this.vectorVideoJuegos[i].consola === "Nintendo") {
@@ -141,7 +138,6 @@ export default defineComponent({
             info_lanzamiento_3: "" as string,
             info_lanzamiento_4: "" as string,
             info_lanzamiento_5: "" as string,
-
         }
     },
     mounted()
