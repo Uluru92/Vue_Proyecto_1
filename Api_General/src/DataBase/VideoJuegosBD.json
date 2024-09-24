@@ -209,20 +209,6 @@
       "Año lanzamiento": "2022",
       "valor": "$60",
       "disponibilidad": "true"
-    },
-    {
-      "gameName": "Test nuevo juego",
-      "ID": "3",
-      "consola": "PlayStation 5",
-      "version": "Remake",
-      "categoría": [
-        "Acción",
-        "RPG",
-        "Aventura"
-      ],
-      "Año lanzamiento": "2022",
-      "valor": "$70",
-      "disponibilidad": "true"
     }
   ]
 }

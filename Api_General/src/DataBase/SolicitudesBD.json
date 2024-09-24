@@ -4,22 +4,25 @@
       "Nombre": "Jorddy",
       "NumeroTelefono": "87900040",
       "CorreoElectronico": "Jorddy.castro@gmail.com",
-      "Comentarios": "quiero este juego!",
-      "BotonEnviar": "listo!"
+      "consola": "PlayStation 5",
+      "gameName": "Returnal",
+      "comment": "Can I get it before next friday?"
     },
     {
       "Nombre": "Fabian",
       "NumeroTelefono": "83552395",
-      "CorreoElectronico": "Jorddy.castro@hotmail.com",
-      "Comentarios": "quiero este juego!!",
-      "BotonEnviar": "listo!!"
+      "CorreoElectronico": "jcastroaraya@phcconsultores.com",
+      "consola": "Xbox",
+      "gameName": "Halo Infinite",
+      "comment": "Thanks!"
     },
     {
       "Nombre": "Yadira",
       "NumeroTelefono": "84135693",
       "CorreoElectronico": "yadac71@hotmail.com",
-      "Comentarios": "Entregar lo antes posible",
-      "BotonEnviar": "Listo"
+      "consola": "Nintendo",
+      "gameName": "Animal Crossing: New Horizons",
+      "comment": "Grettings!"
     }
   ]
 }

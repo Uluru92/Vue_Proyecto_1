@@ -13,8 +13,6 @@
                 <input v-model.trim="Email_input" class="form-control" placeholder="Email" :style="{backgroundColor:EmailColor}">
                 <h3 v-if="EmailRequired">{{EmailRequired_message}}</h3>
                 
-                <select class="form-select" :style="{backgroundColor:ConsolaColor}"></select>
-                
                 <select class="form-select" v-model="Consolas" :style="{backgroundColor:ConsolaColor}">
                     <option >{{Consolas}}</option>
                     <option v-for="(consola,index) in ConsolasDisponibles" :key="index">
@@ -23,7 +21,7 @@
                 </select>     
                 <h3 v-if="ConsolaRequired">{{ConsolaRequired_message}}</h3>
 
-                <select v-if="Consolas ==='Play Station 5'" class="form-select" v-model="VideoGames" :style="{backgroundColor:VideoGamesColor}">
+                <select v-if="Consolas ==='PlayStation 5'" class="form-select" v-model="VideoGames" :style="{backgroundColor:VideoGamesColor}">
                     <option >{{VideoGames}}</option>
                     <option v-for="(videogame,index) in VideoGamesPlayStation5" :key="index">
                         {{ videogame }}
@@ -67,7 +65,6 @@
     interface ComponentData
     {
     enviarSolicitud: string,
-
     PhoneNumber_input: string,
     Email_input: string,
     consolaSelected: string,
@@ -76,7 +73,6 @@
     additionalComment_input: string,
     Consolas: string,
     VideoGames: string,
-    ConsolasDisponibles: string[],
     VideoGamesPlayStation5: string[],
     VideoGamesXbox: string[],
     VideoGamesNintendo: string[],
@@ -202,11 +198,23 @@ export default defineComponent({
                         this.joke = true
                 }             
             },
-            async llamarApiConsolas()
-        {
+            async llamarApiVideoJuegos(){
                 const respuesta = await axios.get('http://localhost:3015/api/route/ObtenerTodosLosVideoJuegos')
-                console.log(respuesta)
-        },
+                console.log(respuesta);
+                this.vectorVideoJuegos = respuesta.data.DetalleRespuesta;
+
+                const vectorConsolas = [] as string[];
+                for (let i = 0; i < this.vectorVideoJuegos.length; i++){
+                    const consolaActual = this.vectorVideoJuegos[i].consola;
+                    if (!vectorConsolas.includes(consolaActual))
+                    {
+                       vectorConsolas.push(consolaActual);
+                    }
+                    this.ConsolasDisponibles = vectorConsolas      
+                }
+                console.log(this.ConsolasDisponibles)
+     
+            }
     },
         data()
         {
@@ -220,7 +228,7 @@ export default defineComponent({
                 additionalComment_input: "",
                 Consolas: "Select your favorite consola",
                 VideoGames: "Select the game you want to purchase",
-                ConsolasDisponibles: ["Play Station 5","Xbox","Nintendo"],
+                ConsolasDisponibles: [] as string[],
                 VideoGamesPlayStation5: ["Demon's Souls", "Ratchet & Clank: Rift Apart", "Horizon Forbidden West", "Returnal", "Spider-Man: Miles Morales"],
                 VideoGamesXbox: ["Halo Infinite", "Forza Horizon 5", "Fable", "Gears 5", "Sea of Thieve"],
                 VideoGamesNintendo: ["The Legend of Zelda: Tears of the Kingdom", "Super Mario Odyssey", "Animal Crossing: New Horizons", "Mario Kart 8 Deluxe", "Splatoon 3"],
@@ -247,12 +255,13 @@ export default defineComponent({
                 RequestBackColor: "white",
                 joke: false,
                 
-                vectorConsolas: [] as any,
+                vectorVideoJuegos: [] as any,
+                vectorConsolas: [] as string[]
             }
     },
     mounted()
     {
-        this.llamarApiConsolas();
+        this.llamarApiVideoJuegos();
     }
 
     })
