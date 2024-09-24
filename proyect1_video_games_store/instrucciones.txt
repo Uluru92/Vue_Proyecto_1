@@ -1,0 +1,47 @@
+Profesor: Johel Adolfo Vargas Sandoval
+Horario: Lunes 6:30 pm – Miércoles 6:30 pm
+VLA – Full Stack Front End Developer
+Observaciones:
+• La fecha límite de entrega es el 31 de agosto.
+• La ejecución de la actividad es de forma individual.
+• Si va utilizar algún template para la ejecución, no puede utilizar el suministrado por
+el profesor.
+• El proyecto debe ser por medio del framework vue. Puede utilizar la versión 3.
+Indicaciones del proyecto.
+Usted se le ha contratado para desarrollar una página de video juegos, en la que debe
+mostrar los siguientes apartados:
+• NavBar con los siguientes apartados:
+o Inicio.
+o Noticias.
+o Video Juegos.
+▪ Play Station 5.
+▪ Xbox.
+▪ Nintendo.
+o Contacto
+
+En la sección de noticias, realizar un componente genérico en el que implemente al menos
+3 noticias, puede utilizar alguna referencia actual. Debe contener una imagen, un título,
+un párrafo de no más de 10 lineas. (para este apartado puede tomar como referencia el
+ejercicio de testimonio que usamos en react y migramos a vue)
+En la sección de video juegos deben aparecer 3 sub apartados, referenciando que son de
+las consolas. Al ingresar a cada uno de los sub apartados, es necesario, que se muestren 5
+juegos. Debe aparecer una imagen pequeña, el nombre del juego.
+NOTA: Si quiere ganar unos puntos adicionales en la nota del curso, mostrar un botón
+que diga “ver detalle”, que debe aparecer por cada uno de los video juegos. Debe
+mostrar un cuadro emergente, con la siguiente información:
+
+1. Nombre del juego.
+2. Año de lanzamiento.
+3. Una pequeña imagen de la consola.
+
+En la sección de contacto, debe mostrar un formulario con los siguientes campos:
+• Nombre completo.
+
+• Número de teléfono.
+• Correo electrónico.
+• Comentarios.
+• Boton de enviar.
+Todos los campos son necesarios, caso contrario debe controlar cuáles son los campos
+que hacen falta. Al momento de enviar, debe mostrar un cuadro emergente diciendo que
+la información ha sido suministrada y se le estará contactando en un periodo máximo de 2
+días.
