@@ -13,7 +13,7 @@
                 <input v-model.trim="Email_input" class="form-control" placeholder="Email" :style="{backgroundColor:EmailColor}">
                 <h3 v-if="EmailRequired">{{EmailRequired_message}}</h3>
                 
-                <select class="form-select" v-model="Consolas" :style="{backgroundColor:ConsolaColor}">
+                <select @change="consolaEventSelect()" class="form-select" v-model="Consolas" :style="{backgroundColor:ConsolaColor}">
                     <option v-if="Consolas ==='Select your favorite consola'">{{Consolas}}</option>
                     <option v-for="(consola,index) in ConsolasDisponibles" :key="index">
                         {{ consola }}
@@ -198,6 +198,9 @@ export default defineComponent({
                         this.joke = true
                 }             
             },
+            consolaEventSelect() {
+                    this.VideoGames === 'Select the game you want to purchase' as String
+            },
             async llamarApiVideoJuegos(){
                 const respuesta = await axios.get('http://localhost:3015/api/route/ObtenerTodosLosVideoJuegos')
                 console.log(respuesta);
@@ -257,7 +260,6 @@ export default defineComponent({
             return {
                 enviarSolicitud: "",
                 consolaSelected: "",
-                videoGameSelected: "",
                 userName_input: "",
                 PhoneNumber_input:"",
                 Email_input: "",
