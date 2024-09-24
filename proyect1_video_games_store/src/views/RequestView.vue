@@ -199,7 +199,7 @@ export default defineComponent({
                 }             
             },
             consolaEventSelect() {
-                    this.VideoGames === 'Select the game you want to purchase' as String
+                    this.VideoGames = 'Select the game you want to purchase' as string
             },
             async llamarApiVideoJuegos(){
                 const respuesta = await axios.get('http://localhost:3015/api/route/ObtenerTodosLosVideoJuegos')
