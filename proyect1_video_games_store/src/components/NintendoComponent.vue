@@ -68,9 +68,7 @@ export default defineComponent({
             for (let i = 0; i < this.vectorVideoJuegos.length; i++) {
                 if (this.vectorVideoJuegos[i].consola === "Nintendo") {
                     const lanzamientoActual = this.vectorVideoJuegos[i].lanzamiento;
-                    if (!vectorLanzamientoNintendo.includes(lanzamientoActual)) {
-                        vectorLanzamientoNintendo.push(lanzamientoActual);
-                    }
+                    vectorLanzamientoNintendo.push(lanzamientoActual);
                     this.LanzamientoGame = vectorLanzamientoNintendo
                 }
             }
@@ -160,7 +158,7 @@ export default defineComponent({
 }
 .buttonSelected:hover {
     color: #15ff00;
-
+    background-color: #000000;
 }
 .GameSelect 
 {
