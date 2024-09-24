@@ -1,7 +1,7 @@
 <template>
     <div class="container">
       <div class="contenedorSolicitud">    
-            <h1>{{Visitor}} Submit your request now!</h1>
+            <h1>{{userName_input}} Submit your request now!</h1>
             <div>
 
                 <input v-model.lazy="userName_input" class="form-control" placeholder="Your Name" :style="{backgroundColor:userColor}">
@@ -22,19 +22,19 @@
                 <h3 v-if="ConsolaRequired">{{ConsolaRequired_message}}</h3>
 
                 <select v-if="Consolas ==='PlayStation 5'" class="form-select" v-model="VideoGames" :style="{backgroundColor:VideoGamesColor}">
-                    <option >{{VideoGames}}</option>
+                    <option v-if="VideoGames ==='Select the game you want to purchase'">{{VideoGames}}</option>
                     <option v-for="(videogame,index) in VideoGamesPlayStation5" :key="index">
                         {{ videogame }}
                     </option>
                 </select>
                 <select v-if="Consolas ==='Xbox'" class="form-select" v-model="VideoGames" :style="{backgroundColor:VideoGamesColor}">
-                    <option >{{VideoGames}}</option>
+                    <option v-if="VideoGames ==='Select the game you want to purchase'">{{VideoGames}}</option>
                     <option v-for="(videogame,index) in VideoGamesXbox" :key="index">
                         {{ videogame }}
                     </option>   
                 </select>
                 <select v-if="Consolas ==='Nintendo'" class="form-select" v-model="VideoGames" :style="{backgroundColor:VideoGamesColor}">
-                    <option >{{VideoGames}}</option>
+                    <option v-if="VideoGames ==='Select the game you want to purchase'">{{VideoGames}}</option>
                     <option v-for="(videogame,index) in VideoGamesNintendo" :key="index">
                         {{ videogame }}
                     </option>
