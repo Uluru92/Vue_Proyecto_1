@@ -14,7 +14,7 @@
                 <h3 v-if="EmailRequired">{{EmailRequired_message}}</h3>
                 
                 <select class="form-select" v-model="Consolas" :style="{backgroundColor:ConsolaColor}">
-                    <option >{{Consolas}}</option>
+                    <option v-if="Consolas ==='Select your favorite consola'">{{Consolas}}</option>
                     <option v-for="(consola,index) in ConsolasDisponibles" :key="index">
                         {{ consola }}
                     </option>
