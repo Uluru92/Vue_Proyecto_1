@@ -15,7 +15,6 @@ import { defineComponent } from 'vue';
 import axios from 'axios';
 
 export default defineComponent({
-
     methods: {
         selectConsola(consolaSelected: string)
         {

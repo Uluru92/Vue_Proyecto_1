@@ -7,24 +7,14 @@
             <li class="list-group-item">{{VideoGamesXbox[3]}}</li>
             <li class="list-group-item">{{VideoGamesXbox[4]}}</li>
         </ul>
-
-        <select class="form-select" v-model="VideoGames">
-            <option v-if="VideoGames ==='Select the game you want to purchase'">{{VideoGames}}</option>
-            <option v-for="(videogame,index) in VideoGamesXbox" :key="index">
-                {{ videogame }}
-            </option>
-        </select>
     </div>
  </template>
 
 <script lang="ts">
-
 import { defineComponent } from 'vue';
 import axios from 'axios';
 
-
 export default defineComponent({
-
     methods: {
         selectConsola(consolaSelected: string)
         {
@@ -65,14 +55,8 @@ export default defineComponent({
     {
         this.llamarApiVideoJuegos();
     }
-
-
-
 });
-
 </script>
 
 <style>
-
-
 </style>
