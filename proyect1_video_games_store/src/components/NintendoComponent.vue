@@ -63,39 +63,39 @@ export default defineComponent({
         },
         showInfo(x: number) {
             if (x == 1) {
-                this.showInfo_1 == true;
-                this.showInfo_2 == false;
-                this.showInfo_3 == false;
-                this.showInfo_4 == false;
-                this.showInfo_5 == false;
+                this.showInfo_1 = true;
+                this.showInfo_2 = false;
+                this.showInfo_3 = false;
+                this.showInfo_4 = false;
+                this.showInfo_5 = false;
             }
-            if (x == 2) {
-                this.showInfo_1 == false;
-                this.showInfo_2 == true;
-                this.showInfo_3 == false;
-                this.showInfo_4 == false;
-                this.showInfo_5 == false;
+            else if (x == 2) {
+                this.showInfo_1 = false;
+                this.showInfo_2 = true;
+                this.showInfo_3 = false;
+                this.showInfo_4 = false;
+                this.showInfo_5 = false;
             }
-            if (x == 3) {
-                this.showInfo_1 == false;
-                this.showInfo_2 == false;
-                this.showInfo_3 == true;
-                this.showInfo_4 == false;
-                this.showInfo_5 == false;
+            else if (x == 3) {
+                this.showInfo_1 = false;
+                this.showInfo_2 = false;
+                this.showInfo_3 = true;
+                this.showInfo_4 = false;
+                this.showInfo_5 = false;
             }
-            if (x == 4) {
-                this.showInfo_1 === false;
-                this.showInfo_2 === false;
-                this.showInfo_3 === false;
-                this.showInfo_4 === true;
-                this.showInfo_5 === false;
+            else if (x == 4) {
+                this.showInfo_1 = false;
+                this.showInfo_2 = false;
+                this.showInfo_3 = false;
+                this.showInfo_4 = true;
+                this.showInfo_5 = false;
             }
-            if (x == 5) {
-                this.showInfo_1 == false;
-                this.showInfo_2 == false;
-                this.showInfo_3 == false;
-                this.showInfo_4 == false;
-                this.showInfo_5 == true;
+            else {
+                this.showInfo_1 = false;
+                this.showInfo_2 = false;
+                this.showInfo_3 = false;
+                this.showInfo_4 = false;
+                this.showInfo_5 = true;
             }
         }
     },
