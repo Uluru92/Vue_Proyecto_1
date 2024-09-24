@@ -10,7 +10,7 @@
         "RPG",
         "Aventura"
       ],
-      "Año lanzamiento": "2020",
+      "lanzamiento": "2020",
       "valor": "$70",
       "disponibilidad": "true"
     },
@@ -24,7 +24,7 @@
         "Plataforma",
         "Aventura"
       ],
-      "Año lanzamiento": "2021",
+      "lanzamiento": "2021",
       "valor": "$60",
       "disponibilidad": "true"
     },
@@ -38,7 +38,7 @@
         "RPG",
         "Aventura"
       ],
-      "Año lanzamiento": "2022",
+      "lanzamiento": "2022",
       "valor": "$70",
       "disponibilidad": "false"
     },
@@ -52,7 +52,7 @@
         "Shooter",
         "Roguelike"
       ],
-      "Año lanzamiento": "2021",
+      "lanzamiento": "2021",
       "valor": "$60",
       "disponibilidad": "false"
     },
@@ -66,7 +66,7 @@
         "Aventura",
         "Superhéroes"
       ],
-      "Año lanzamiento": "2020",
+      "lanzamiento": "2020",
       "valor": "$70",
       "disponibilidad": "false"
     },
@@ -80,7 +80,7 @@
         "Acción",
         "Ciencia Ficción"
       ],
-      "Año lanzamiento": "2021",
+      "lanzamiento": "2021",
       "valor": "$60",
       "disponibilidad": "true"
     },
@@ -94,7 +94,7 @@
         "Simulación",
         "Mundo Abierto"
       ],
-      "Año lanzamiento": "2021",
+      "lanzamiento": "2021",
       "valor": "$60",
       "disponibilidad": "true"
     },
@@ -108,7 +108,7 @@
         "Aventura",
         "Fantasía"
       ],
-      "Año lanzamiento": "2024",
+      "lanzamiento": "2024",
       "valor": "$70",
       "disponibilidad": "false"
     },
@@ -122,7 +122,7 @@
         "Acción",
         "Estrategia"
       ],
-      "Año lanzamiento": "2019",
+      "lanzamiento": "2019",
       "valor": "$40",
       "disponibilidad": "true"
     },
@@ -136,7 +136,7 @@
         "Aventura",
         "Piratas"
       ],
-      "Año lanzamiento": "2018",
+      "lanzamiento": "2018",
       "valor": "$40",
       "disponibilidad": "true"
     },
@@ -150,7 +150,7 @@
         "Acción",
         "Mundo Abierto"
       ],
-      "Año lanzamiento": "2023",
+      "lanzamiento": "2023",
       "valor": "$70",
       "disponibilidad": "true"
     },
@@ -164,7 +164,7 @@
         "Aventura",
         "Acción"
       ],
-      "Año lanzamiento": "2017",
+      "lanzamiento": "2017",
       "valor": "$60",
       "disponibilidad": "true"
     },
@@ -178,7 +178,7 @@
         "Social",
         "Mundo Abierto"
       ],
-      "Año lanzamiento": "2020",
+      "lanzamiento": "2020",
       "valor": "$60",
       "disponibilidad": "true"
     },
@@ -192,7 +192,7 @@
         "Acción",
         "Multijugador"
       ],
-      "Año lanzamiento": "2017",
+      "lanzamiento": "2017",
       "valor": "$60",
       "disponibilidad": "true"
     },
@@ -206,7 +206,7 @@
         "Acción",
         "Multijugador"
       ],
-      "Año lanzamiento": "2022",
+      "lanzamiento": "2022",
       "valor": "$60",
       "disponibilidad": "true"
     }

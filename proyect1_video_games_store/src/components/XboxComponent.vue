@@ -1,6 +1,6 @@
 <template>
     <div>
-        <ul class="list-group" style="padding: 30px;">
+        <ul class="list-group" style="padding-left: 30px;padding-right: 30px">
             <button><li class="buttonSelected">{{VideoGamesXbox[0]}}</li></button>
             <button><li class="buttonSelected">{{VideoGamesXbox[1]}}</li></button>
             <button><li class="buttonSelected">{{VideoGamesXbox[2]}}</li></button>
@@ -38,8 +38,6 @@ export default defineComponent({
                         vectorGameNamesXbox.push(gameNameActual);
                     }
                     this.VideoGamesXbox = vectorGameNamesXbox
-                    console.log(vectorGameNamesXbox)
-                    console.log(this.VideoGamesXbox)
                 }
             }
         }
@@ -59,4 +57,12 @@ export default defineComponent({
 </script>
 
 <style>
+.buttonSelected {
+    color: #000000;
+    transition: color 1s,
+}
+.buttonSelected:hover {
+    color: #15ff00;
+    background-color: #000000;
+}
 </style>

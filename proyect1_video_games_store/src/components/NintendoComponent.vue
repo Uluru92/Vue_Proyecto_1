@@ -1,12 +1,17 @@
 <template>
     <div>
-        <ul class="list-group" style="padding: 30px;">
-            <button><li class="buttonSelected">{{VideoGamesNintendo[0]}}</li></button>
-            <button><li class="buttonSelected">{{VideoGamesNintendo[1]}}</li></button>
-            <button><li class="buttonSelected">{{VideoGamesNintendo[2]}}</li></button>
-            <button><li class="buttonSelected">{{VideoGamesNintendo[3]}}</li></button>
-            <button><li class="buttonSelected">{{VideoGamesNintendo[4]}}</li></button>
-        </ul>
+        <div class="list-group" style="padding-left: 30px;padding-right: 30px">
+            <button @click="showInfo(1)" class="buttonSelected">{{VideoGamesNintendo[0]}}</button>
+            <button @click="showInfo(2)" class="buttonSelected">{{VideoGamesNintendo[1]}}</button>
+            <button @click="showInfo(3)" class="buttonSelected">{{VideoGamesNintendo[2]}}</button>
+            <button @click="showInfo(4)" class="buttonSelected">{{VideoGamesNintendo[3]}}</button>
+            <button @onclick="showInfo(5)" class="buttonSelected">{{VideoGamesNintendo[4]}}</button>
+        </div>    
+            <h1 v-if="showInfo_1===true">Año de lanzamiento: {{LanzamientoGame[0]}}</h1>
+            <h1 v-if="showInfo_2===true">Año de lanzamiento: {{LanzamientoGame[1]}}</h1>
+            <h1 v-if="showInfo_3===true">Año de lanzamiento: {{LanzamientoGame[2]}}</h1>
+            <h1 v-if="showInfo_4===true">Año de lanzamiento: {{LanzamientoGame[3]}}</h1>
+            <h1 v-if="showInfo_5===true">Año de lanzamiento: {{LanzamientoGame[4]}}</h1>
     </div>
  </template>
 <script lang="ts">
@@ -15,30 +20,36 @@ import axios from 'axios';
 
 export default defineComponent({
     methods: {
-        selectConsola(consolaSelected: string)
-        {
-            this.$emit('consolaSelected', consolaSelected);         
+        selectConsola(consolaSelected: string) {
+            this.$emit('consolaSelected', consolaSelected);
         },
-        async llamarApiVideoJuegos(){
+        async llamarApiVideoJuegos() {
             const respuesta = await axios.get('http://localhost:3015/api/route/ObtenerTodosLosVideoJuegos')
-            console.log(respuesta);
 
             this.vectorVideoJuegos = respuesta.data.DetalleRespuesta;
-                
+
             const vectorGameNamesNintendo = [] as string[];
 
-            for (let i = 0; i < this.vectorVideoJuegos.length; i++)
-            {
-                if (this.vectorVideoJuegos[i].consola === "Nintendo")
-                {
+
+            for (let i = 0; i < this.vectorVideoJuegos.length; i++) {
+                if (this.vectorVideoJuegos[i].consola === "Nintendo") {
                     const gameNameActual = this.vectorVideoJuegos[i].gameName;
-                    if (!vectorGameNamesNintendo.includes(gameNameActual))
-                    {
+                    if (!vectorGameNamesNintendo.includes(gameNameActual)) {
                         vectorGameNamesNintendo.push(gameNameActual);
                     }
                     this.VideoGamesNintendo = vectorGameNamesNintendo
-                    console.log(vectorGameNamesNintendo)
-                    console.log(this.VideoGamesNintendo)
+                }
+            }
+
+            const vectorLanzamientoNintendo = [] as string[];
+
+            for (let i = 0; i < this.vectorVideoJuegos.length; i++) {
+                if (this.vectorVideoJuegos[i].consola === "Nintendo") {
+                    const lanzamientoActual = this.vectorVideoJuegos[i].lanzamiento;
+                    if (!vectorLanzamientoNintendo.includes(lanzamientoActual)) {
+                        vectorLanzamientoNintendo.push(lanzamientoActual);
+                    }
+                    this.LanzamientoGame = vectorLanzamientoNintendo
                 }
             }
         },
@@ -49,15 +60,68 @@ export default defineComponent({
         changeBackColorDefault() {
             this.colorGameSelected = 'black' as string
             this.colorBackGameSelected = 'white' as string
+        },
+        showInfo(x: number) {
+            if (x == 1) {
+                this.showInfo_1 == true;
+                this.showInfo_2 == false;
+                this.showInfo_3 == false;
+                this.showInfo_4 == false;
+                this.showInfo_5 == false;
+            }
+            if (x == 2) {
+                this.showInfo_1 == false;
+                this.showInfo_2 == true;
+                this.showInfo_3 == false;
+                this.showInfo_4 == false;
+                this.showInfo_5 == false;
+            }
+            if (x == 3) {
+                this.showInfo_1 == false;
+                this.showInfo_2 == false;
+                this.showInfo_3 == true;
+                this.showInfo_4 == false;
+                this.showInfo_5 == false;
+            }
+            if (x == 4) {
+                this.showInfo_1 === false;
+                this.showInfo_2 === false;
+                this.showInfo_3 === false;
+                this.showInfo_4 === true;
+                this.showInfo_5 === false;
+            }
+            if (x == 5) {
+                this.showInfo_1 == false;
+                this.showInfo_2 == false;
+                this.showInfo_3 == false;
+                this.showInfo_4 == false;
+                this.showInfo_5 == true;
+            }
         }
     },
     data() {
         return {
-            VideoGames: '' as string,
             VideoGamesNintendo: [] as string[],
+            LanzamientoGame: [] as any,
+
+            vectorLanzamientoNintendo: [] as any,
             vectorVideoJuegos: [] as any,
+
             colorGameSelected: 'black' as string,
             colorBackGameSelected: 'white' as string,
+
+            showInfo_1: false as boolean,
+            showInfo_2: false as boolean,
+            showInfo_3: false as boolean,
+            showInfo_4: false as boolean,
+            showInfo_5: false as boolean,
+
+            info_lanzamiento_1: "" as string,
+            info_lanzamiento_2: "" as string,
+            info_lanzamiento_3: "" as string,
+            info_lanzamiento_4: "" as string,
+            info_lanzamiento_5: "" as string,
+
         }
     },
     mounted()
@@ -70,13 +134,10 @@ export default defineComponent({
 <style>
 .buttonSelected {
     color: #000000;
-
     transition: color 1s,
 }
-
 .buttonSelected:hover {
-    color: #d0ff00;
+    color: #15ff00;
     background-color: #000000;
-    
 }
 </style>
