@@ -40,7 +40,7 @@
                     </option>
                 </select>
                 <h3 v-if="VideoGameRequired">{{VideoGameRequired_message}}</h3>
-
+                
                 <input v-model.trim="additionalComment_input" class="form-control" placeholder="Additional Comment" :style="{backgroundColor:CommentColor}">
                 <h3 v-if="CommentRequired">{{CommentRequired_message}}</h3>
 
@@ -59,7 +59,8 @@
 </template>
 
 <script lang="ts">
-    import { defineComponent, onMounted } from 'vue';
+
+    import { defineComponent} from 'vue';
     import axios from 'axios';
 
     interface ComponentData
@@ -253,7 +254,7 @@ export default defineComponent({
                         this.VideoGamesNintendo = vectorGameNamesNintendo
                     }
                 }
-            },
+            }
     },
         data()
         {
@@ -294,7 +295,7 @@ export default defineComponent({
                 joke: false,
                 
                 vectorVideoJuegos: [] as any,
-                vectorConsolas: [] as string[]
+                vectorConsolas: [] as string[],
             }
     },
     mounted()

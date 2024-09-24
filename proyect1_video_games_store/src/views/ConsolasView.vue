@@ -1,19 +1,33 @@
 <template>
     <div class="container">
         <div class="contenedorVideoGames">
-            <h1>Video Games!</h1>
             <h3>Select your favorite console:</h3>
-            <button class="btn btn-primary" @click="MensajeJuegosPlayStation5(); habilitarMostrarMensaje(); cambiarColor(1)"><h4>{{Consola1}}</h4></button>
-            <button class="btn btn-primary" @click="MensajeJuegosXbox(); habilitarMostrarMensaje(); cambiarColor(2)" ><h4>{{Consola2}}</h4></button>
-            <button class="btn btn-primary" @click="MensajeJuegosNintendo(); habilitarMostrarMensaje(); cambiarColor(3)"><h4>{{Consola3}}</h4></button>    
-            <h6 class="hiddenMessage" v-if="!monstrarMensaje"><h6>Estos son los video juegos de la consola:</h6><h6 :style="{color:colorConsola}">{{ mensaje }}</h6></h6>
-            <h6 v-else></h6>
+            <button class="btn btn-primary" @click="MensajeJuegosPlayStation5();habilitarMensaje(1)"><h4>{{Consola1}}</h4></button>
+            <button class="btn btn-primary" @click="MensajeJuegosXbox();habilitarMensaje(2)" ><h4>{{Consola2}}</h4></button>
+            <button class="btn btn-primary" @click="MensajeJuegosNintendo();habilitarMensaje(3)"><h4>{{Consola3}}</h4></button>    
+        </div>
+        <div v-if="PlayStation5Flag===true">
+            <h6 class="hiddenMessage" v-if="!monstrarMensaje">
+                <h6>Estos son los video juegos de la consola:</h6>
+                <h6 :style="{color:colorConsola}">{{ mensaje }}</h6>    
+                <h6><PlayStation5Component></PlayStation5Component></h6>
+            </h6>
+        </div>
+        <div v-if="XboxFlag===true">
+            <h6 class="hiddenMessage" v-if="!monstrarMensaje">
+                <h6>Estos son los video juegos de la consola:</h6>
+                <h6 :style="{color:colorConsola}">{{ mensaje }}</h6>
+                <h6><XboxComponent></XboxComponent></h6>
+            </h6>
+        </div>
+        <div v-if="NintendoFlag===true">
+            <h6 class="hiddenMessage" v-if="!monstrarMensaje">
+                <h6>Estos son los video juegos de la consola:</h6>
+                <h6 :style="{color:colorConsola}">{{ mensaje }}</h6>
+                <h6><NintendoComponent></NintendoComponent></h6>
+            </h6>
         </div>
     </div>
-    <PlayStation5Component></PlayStation5Component>
-    <NintendoComponent></NintendoComponent>
-    <XboxComponent></XboxComponent>
-    
 </template>
 
 <script lang="ts">
@@ -21,14 +35,6 @@ import { defineComponent } from 'vue';
 import PlayStation5Component from '@/components/PlayStation5Component.vue';
 import NintendoComponent from '@/components/NintendoComponent.vue';
 import XboxComponent from '@/components/XboxComponent.vue';
-
-
-    interface ComponentData
-    {
-        mensaje: string,
-        mostrarMensaje: boolean,
-        colorConsola: string,
-    }
         
 export default defineComponent({
         components: {
@@ -53,31 +59,43 @@ export default defineComponent({
             MensajeJuegosNintendo() {
                 this.mensaje = `${this.Consola3}`;
             },
-            habilitarMostrarMensaje() {
-                this.monstrarMensaje = !this.monstrarMensaje;
-            },
-            cambiarColor(numero: number)
+            habilitarMensaje(numero: number)
             {
                 if (numero == 1)
                 {
                     this.colorConsola = 'blue';
+                    this.PlayStation5Flag = true;
+                    this.XboxFlag = false;
+                    this.NintendoFlag = false;
+                    this.monstrarMensaje = !this.monstrarMensaje;
                 }
                 else if (numero == 2)
                 {
                     this.colorConsola = 'purple';
+                    this.XboxFlag = true;
+                    this.PlayStation5Flag = false;
+                    this.NintendoFlag = false;
+                    this.monstrarMensaje = !this.monstrarMensaje;
                 }
                 else
                 {
                     this.colorConsola = 'red';
+                    this.NintendoFlag = true;
+                    this.PlayStation5Flag = false;
+                    this.XboxFlag = false;
+                    this.monstrarMensaje = !this.monstrarMensaje;
                 }
             }
         },
         data()
         {
             return {
-                mensaje: "",  
-                monstrarMensaje: true,
-                colorConsola: 'black',
+                mensaje: "" as string,  
+                monstrarMensaje: true as boolean, 
+                colorConsola: 'black' as string,
+                PlayStation5Flag: false as boolean,
+                XboxFlag: false as boolean,
+                NintendoFlag: false as boolean,
             }
         }
     })

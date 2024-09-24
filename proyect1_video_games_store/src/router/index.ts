@@ -29,21 +29,6 @@ const routes: Array<RouteRecordRaw> = [
     }
   },
   {
-    path: '/almacenamiento',
-    name: 'almacenamiento',
-    component: AlmacenamientoView
-  },
-  {
-    path: '/directivas',
-    name: 'directivas',
-    component: DirectivasView
-  },
-  {
-    path: '/emits',
-    name: 'emits',
-    component: EmitsView
-  },
-  {
     path: '/request',
     name: 'request',
     component: RequestView
@@ -57,11 +42,6 @@ const routes: Array<RouteRecordRaw> = [
       Consola2: "Xbox",
       Consola3: "Nintendo",
     }
-  },
-  {
-    path: '/login',
-    name: 'login',
-    component: LoginView
   },
 ]
 
