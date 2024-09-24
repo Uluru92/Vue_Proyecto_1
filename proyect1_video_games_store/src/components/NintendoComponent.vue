@@ -1,11 +1,11 @@
 <template>
     <div>
-        <ul class="list-group">
-            <button><li class="list-group-item">{{VideoGamesNintendo[0]}}</li></button>
-            <button><li class="list-group-item">{{VideoGamesNintendo[1]}}</li></button>
-            <button><li class="list-group-item">{{VideoGamesNintendo[2]}}</li></button>
-            <button><li class="list-group-item">{{VideoGamesNintendo[3]}}</li></button>
-            <button><li class="list-group-item">{{VideoGamesNintendo[4]}}</li></button>
+        <ul class="list-group" style="padding: 30px;">
+            <button><li class="buttonSelected">{{VideoGamesNintendo[0]}}</li></button>
+            <button><li class="buttonSelected">{{VideoGamesNintendo[1]}}</li></button>
+            <button><li class="buttonSelected">{{VideoGamesNintendo[2]}}</li></button>
+            <button><li class="buttonSelected">{{VideoGamesNintendo[3]}}</li></button>
+            <button><li class="buttonSelected">{{VideoGamesNintendo[4]}}</li></button>
         </ul>
     </div>
  </template>
@@ -41,6 +41,14 @@ export default defineComponent({
                     console.log(this.VideoGamesNintendo)
                 }
             }
+        },
+        changeBackColor() {
+            this.colorGameSelected = 'white' as string
+            this.colorBackGameSelected = 'green' as string
+        },
+        changeBackColorDefault() {
+            this.colorGameSelected = 'black' as string
+            this.colorBackGameSelected = 'white' as string
         }
     },
     data() {
@@ -48,6 +56,8 @@ export default defineComponent({
             VideoGames: '' as string,
             VideoGamesNintendo: [] as string[],
             vectorVideoJuegos: [] as any,
+            colorGameSelected: 'black' as string,
+            colorBackGameSelected: 'white' as string,
         }
     },
     mounted()
@@ -58,4 +68,15 @@ export default defineComponent({
 </script>
 
 <style>
+.buttonSelected {
+    color: #000000;
+
+    transition: color 1s,
+}
+
+.buttonSelected:hover {
+    color: #d0ff00;
+    background-color: #000000;
+    
+}
 </style>

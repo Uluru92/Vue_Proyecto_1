@@ -1,11 +1,11 @@
 <template>
     <div>
-        <ul class="list-group">
-            <button><li class="list-group-item">{{VideoGamesPlayStation5[0]}}</li></button>
-            <button><li class="list-group-item">{{VideoGamesPlayStation5[1]}}</li></button>
-            <button><li class="list-group-item">{{VideoGamesPlayStation5[2]}}</li></button>
-            <button><li class="list-group-item">{{VideoGamesPlayStation5[3]}}</li></button>
-            <button><li class="list-group-item">{{VideoGamesPlayStation5[4]}}</li></button>
+        <ul class="list-group" style="padding: 30px;">
+            <button><li class="buttonSelected">{{VideoGamesPlayStation5[0]}}</li></button>
+            <button><li class="buttonSelected">{{VideoGamesPlayStation5[1]}}</li></button>
+            <button><li class="buttonSelected">{{VideoGamesPlayStation5[2]}}</li></button>
+            <button><li class="buttonSelected">{{VideoGamesPlayStation5[3]}}</li></button>
+            <button><li class="buttonSelected">{{VideoGamesPlayStation5[4]}}</li></button>
         </ul>
     </div>
  </template>

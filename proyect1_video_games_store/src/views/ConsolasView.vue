@@ -8,22 +8,22 @@
         </div>
         <div v-if="PlayStation5Flag===true">
             <h6 class="hiddenMessage" v-if="!monstrarMensaje">
-                <h6>Estos son los video juegos de la consola:</h6>
                 <h6 :style="{color:colorConsola}">{{ mensaje }}</h6>    
+                <h6>Select your favorite Video Game:</h6>
                 <h6><PlayStation5Component></PlayStation5Component></h6>
             </h6>
         </div>
         <div v-if="XboxFlag===true">
             <h6 class="hiddenMessage" v-if="!monstrarMensaje">
-                <h6>Estos son los video juegos de la consola:</h6>
                 <h6 :style="{color:colorConsola}">{{ mensaje }}</h6>
+                <h6>Select your favorite Video Game:</h6>
                 <h6><XboxComponent></XboxComponent></h6>
             </h6>
         </div>
         <div v-if="NintendoFlag===true">
             <h6 class="hiddenMessage" v-if="!monstrarMensaje">
-                <h6>Estos son los video juegos de la consola:</h6>
                 <h6 :style="{color:colorConsola}">{{ mensaje }}</h6>
+                <h6>Select your favorite Video Game:</h6>
                 <h6><NintendoComponent></NintendoComponent></h6>
             </h6>
         </div>

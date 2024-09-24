@@ -1,11 +1,11 @@
 <template>
     <div>
-        <ul class="list-group">
-            <button><li class="list-group-item">{{VideoGamesXbox[0]}}</li></button>
-            <button><li class="list-group-item">{{VideoGamesXbox[1]}}</li></button>
-            <button><li class="list-group-item">{{VideoGamesXbox[2]}}</li></button>
-            <button><li class="list-group-item">{{VideoGamesXbox[3]}}</li></button>
-            <button><li class="list-group-item">{{VideoGamesXbox[4]}}</li></button>
+        <ul class="list-group" style="padding: 30px;">
+            <button><li class="buttonSelected">{{VideoGamesXbox[0]}}</li></button>
+            <button><li class="buttonSelected">{{VideoGamesXbox[1]}}</li></button>
+            <button><li class="buttonSelected">{{VideoGamesXbox[2]}}</li></button>
+            <button><li class="buttonSelected">{{VideoGamesXbox[3]}}</li></button>
+            <button><li class="buttonSelected">{{VideoGamesXbox[4]}}</li></button>
         </ul>
     </div>
  </template>
