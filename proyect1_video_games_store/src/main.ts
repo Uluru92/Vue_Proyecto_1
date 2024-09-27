@@ -11,3 +11,11 @@ const app = createApp(App);
 app.use(BootstrapVue3);
 
 createApp(App).use(store).use(router).mount('#app')
+
+
+/* Pendiente: Necesito ver cual import debo dejar para implementar bootstrap
+Otra opción es eliminar la carpeta de node_modules y volver a instalar con el comando
+npm install
+
+Nota: NUNCA usar el comando npm install ya que reescribo los archivos package.json y esto es un grave problema
+*/
