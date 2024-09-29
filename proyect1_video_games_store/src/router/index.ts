@@ -1,12 +1,8 @@
 import { createRouter, createWebHashHistory, RouteRecordRaw } from 'vue-router'
 import WelcomeView from '../views/WelcomeView.vue'
 import NewsView from '../views/NewsView.vue'
-import AlmacenamientoView from '../views/AlmacenamientoView.vue'
-import DirectivasView from '../views/DirectivasView.vue'
-import EmitsView from '../views/EmitsView.vue'
 import RequestView from '../views/RequestView.vue'
 import ConsolasView from '../views/ConsolasView.vue'
-import LoginView from '../views/LoginView.vue'
 
 const routes: Array<RouteRecordRaw> = [
 
