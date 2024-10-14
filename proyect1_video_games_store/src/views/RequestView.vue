@@ -38,9 +38,19 @@
                 <input v-model.trim="additionalComment_input" class="form-control" placeholder="Additional Comment" :style="{backgroundColor:CommentColor}">
                 <h3 v-if="CommentRequired">{{CommentRequired_message}}</h3>
             </div>
+
             <br>
+
             <b-button @click="SendRequest()" class="btn btn-success">Send</b-button>
+            <button class="btn btn-info">Mostrar modal</button>
+
             <br>
+            
+            <div>
+                
+
+
+            </div>
             <br>
             <h6 style="color: red;">{{ mensajeCamposObligatorios }}</h6>
             <br>
@@ -49,6 +59,22 @@
             <h4 v-if="joke===true" v-show="userName_input">Thanks for choosing us {{ userName_input.split('').reverse().join('')}}! Ups, thats your name backwards!!!</h4>
         </div>
     </div>
+
+
+    <div>
+        <b-button id="show-btn" @click="$bvModal.show('bv-modal-example')">Mostrar Modal</b-button>
+
+        <b-modal id="bv-modal-example" hide-footer>
+            <template #modal-title>
+            Using <code>$bvModal</code> Methods
+            </template>
+            <div class="d-block text-center">
+            <h3>Hello From This Modal!</h3>
+            </div>
+            <b-button class="mt-3" block @click="$bvModal.hide('bv-modal-example')">Close Me</b-button>
+        </b-modal>
+    </div>
+
 </template>
 
 <script lang="ts">
