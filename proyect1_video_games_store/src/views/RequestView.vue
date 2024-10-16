@@ -49,9 +49,10 @@
         </div>
     </div>
 
-<MensajesInformativos 
-    mensaje="Hola Mundo como están!?">
-</MensajesInformativos>
+    <MensajesInformativos 
+        :mensaje="mensajeMostrar"
+        v-model:modalVisible="modalVisible"
+    />
 
 </template>
 
@@ -299,6 +300,9 @@ export default defineComponent({
                 
                 vectorVideoJuegos: [] as any,
                 vectorConsolas: [] as string[],
+
+                mensajeMostrar: "" as string,
+                modalVisible: false as boolean
             }
     },
     mounted()
