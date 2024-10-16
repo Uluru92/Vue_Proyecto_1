@@ -38,19 +38,8 @@
                 <input v-model.trim="additionalComment_input" class="form-control" placeholder="Additional Comment" :style="{backgroundColor:CommentColor}">
                 <h3 v-if="CommentRequired">{{CommentRequired_message}}</h3>
             </div>
-
             <br>
-
             <b-button @click="SendRequest()" class="btn btn-success">Send</b-button>
-            <button class="btn btn-info">Mostrar modal</button>
-
-            <br>
-            
-            <div>
-                
-
-
-            </div>
             <br>
             <h6 style="color: red;">{{ mensajeCamposObligatorios }}</h6>
             <br>
@@ -60,20 +49,9 @@
         </div>
     </div>
 
-
-    <div>
-        <b-button id="show-btn" @click="$bvModal.show('bv-modal-example')">Mostrar Modal</b-button>
-
-        <b-modal id="bv-modal-example" hide-footer>
-            <template #modal-title>
-            Using <code>$bvModal</code> Methods
-            </template>
-            <div class="d-block text-center">
-            <h3>Hello From This Modal!</h3>
-            </div>
-            <b-button class="mt-3" block @click="$bvModal.hide('bv-modal-example')">Close Me</b-button>
-        </b-modal>
-    </div>
+<MensajesInformativos 
+    mensaje="Hola Mundo como están!?">
+</MensajesInformativos>
 
 </template>
 
@@ -81,6 +59,8 @@
 
     import { defineComponent} from 'vue';
     import axios from 'axios';
+    import MensajesInformativos from '@/components/MensajesInformativos.vue';
+
 
     interface ComponentData
     {
@@ -220,58 +200,65 @@ export default defineComponent({
             consolaEventSelect() {
                     this.VideoGames = 'Select the game you want to purchase' as string
             },
-            async llamarApiVideoJuegos(){
+            async llamarApiVideoJuegos() {
                 const respuesta = await axios.get('http://localhost:3015/api/route/ObtenerTodosLosVideoJuegos')
-                console.log(respuesta);
+                    console.log(respuesta);
 
-                this.vectorVideoJuegos = respuesta.data.DetalleRespuesta;
+                    this.vectorVideoJuegos = respuesta.data.DetalleRespuesta;
 
-                const vectorConsolas = [] as string[];
-                for (let i = 0; i < this.vectorVideoJuegos.length; i++){
-                    const consolaActual = this.vectorVideoJuegos[i].consola;
-                    if (!vectorConsolas.includes(consolaActual))
-                    {
-                       vectorConsolas.push(consolaActual);
-                    }
-                    this.ConsolasDisponibles = vectorConsolas      
-                }
-
-                const vectorGameNamesPlayStation5 = [] as string[];
-                const vectorGameNamesXbox = [] as string[];
-                const vectorGameNamesNintendo = [] as string[];
-
-                for (let i = 0; i < this.vectorVideoJuegos.length; i++)
-                {
-                    if (this.vectorVideoJuegos[i].consola === "PlayStation 5")
-                    {
-                        const gameNameActual = this.vectorVideoJuegos[i].gameName;
-                        if (!vectorGameNamesPlayStation5.includes(gameNameActual))
+                    const vectorConsolas = [] as string[];
+                    for (let i = 0; i < this.vectorVideoJuegos.length; i++){
+                        const consolaActual = this.vectorVideoJuegos[i].consola;
+                        if (!vectorConsolas.includes(consolaActual))
                         {
-                            vectorGameNamesPlayStation5.push(gameNameActual);
+                        vectorConsolas.push(consolaActual);
                         }
-                        this.VideoGamesPlayStation5 = vectorGameNamesPlayStation5
+                        this.ConsolasDisponibles = vectorConsolas      
                     }
-                    if (this.vectorVideoJuegos[i].consola === "Xbox")
+
+                    const vectorGameNamesPlayStation5 = [] as string[];
+                    const vectorGameNamesXbox = [] as string[];
+                    const vectorGameNamesNintendo = [] as string[];
+
+                    for (let i = 0; i < this.vectorVideoJuegos.length; i++)
                     {
-                        const gameNameActual = this.vectorVideoJuegos[i].gameName;
-                        if (!vectorGameNamesXbox.includes(gameNameActual))
+                        if (this.vectorVideoJuegos[i].consola === "PlayStation 5")
                         {
-                            vectorGameNamesXbox.push(gameNameActual);
+                            const gameNameActual = this.vectorVideoJuegos[i].gameName;
+                            if (!vectorGameNamesPlayStation5.includes(gameNameActual))
+                            {
+                                vectorGameNamesPlayStation5.push(gameNameActual);
+                            }
+                            this.VideoGamesPlayStation5 = vectorGameNamesPlayStation5
                         }
-                        this.VideoGamesXbox = vectorGameNamesXbox
-                    }
-                    if (this.vectorVideoJuegos[i].consola === "Nintendo")
-                    {
-                        const gameNameActual = this.vectorVideoJuegos[i].gameName;
-                        if (!vectorGameNamesNintendo.includes(gameNameActual))
+                        if (this.vectorVideoJuegos[i].consola === "Xbox")
                         {
-                            vectorGameNamesNintendo.push(gameNameActual);
+                            const gameNameActual = this.vectorVideoJuegos[i].gameName;
+                            if (!vectorGameNamesXbox.includes(gameNameActual))
+                            {
+                                vectorGameNamesXbox.push(gameNameActual);
+                            }
+                            this.VideoGamesXbox = vectorGameNamesXbox
                         }
-                        this.VideoGamesNintendo = vectorGameNamesNintendo
+                        if (this.vectorVideoJuegos[i].consola === "Nintendo")
+                        {
+                            const gameNameActual = this.vectorVideoJuegos[i].gameName;
+                            if (!vectorGameNamesNintendo.includes(gameNameActual))
+                            {
+                                vectorGameNamesNintendo.push(gameNameActual);
+                            }
+                            this.VideoGamesNintendo = vectorGameNamesNintendo
+                        }
                     }
-                }
+                
+            },
+            show() {
+                console.log("Hola Mundo")
             }
-    },
+        },
+        components:{
+            MensajesInformativos
+        },
         data()
         {
             return {
