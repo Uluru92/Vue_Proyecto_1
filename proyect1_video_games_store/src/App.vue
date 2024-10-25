@@ -1,20 +1,25 @@
-<script setup lang="ts">
-
-</script>
-
 <template>
+  <MenuBar></MenuBar>
   <nav>
     <router-link to="/">Welcome</router-link> |
     <router-link to="/news">News</router-link> |
     <router-link to="/consolas">Video Games</router-link> |
     <router-link to="/request">Request</router-link>
-
-    <NewsView
-    Noticia1="Spacestation Gaming take ALGS Split 2 Playoff title">
-    </NewsView>
   </nav>
   <router-view/>
+
 </template>
+
+<script lang="ts">
+  import MenuBar from './components/MenuBar.vue';
+  export default ({  
+    components: {
+      MenuBar
+    }
+})
+
+
+</script>
 
 <style lang="scss">
 #app {
