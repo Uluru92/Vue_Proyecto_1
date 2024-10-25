@@ -8,14 +8,15 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Home</a>
+          <router-link to="/">
+            <a class="nav-link active" aria-current="page" href="#">Welcome</a>
+          </router-link>         
         </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Dropdown
+            Menu
           </a>
           <ul class="dropdown-menu">
-            <li><router-link to="/"><a class="dropdown-item" href="#">Welcome</a></router-link></li>
             <li><router-link to="/news"><a class="dropdown-item" href="#">News</a></router-link></li>
             <li><router-link to="/consolas"><a class="dropdown-item" href="#">Video Games</a></router-link></li>
             <li><router-link to="/request"><a class="dropdown-item" href="#">Request</a></router-link></li>
@@ -25,6 +26,9 @@
     </div>
   </div>
 </nav>
+
+
+
 </template>
 
 <script>
