@@ -10,7 +10,7 @@
         <div v-if="showInfo_1===true" class="GameSelect">
             <h6>Video Game Selected -  {{VideoGamesXbox[0]}}</h6>
             <h6>Year: {{LanzamientoGame[0]}}</h6>
-            <img style="width: 50%; height: 50%;" class="contenedorImagen" src="../assets/img/xbox.png">
+            <img v-bind:src="imagenXbox" style="width: 50%; height: 50%;" class="contenedorImagen">
         </div>
         <div v-if="showInfo_2===true" class="GameSelect">
             <h6>Video Game Selected -  {{VideoGamesXbox[1]}}</h6>
@@ -139,6 +139,8 @@ export default defineComponent({
             info_lanzamiento_3: "" as string,
             info_lanzamiento_4: "" as string,
             info_lanzamiento_5: "" as string,
+
+            imagenXbox: "../assets/img/xbox.png" as string
         }
     },
     mounted()

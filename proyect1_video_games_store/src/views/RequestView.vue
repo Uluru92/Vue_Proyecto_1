@@ -303,7 +303,9 @@ export default defineComponent({
 
                 mensajeMostrar: "" as string,
                 modalVisible: false as boolean
+                
             }
+            
     },
     mounted()
     {
